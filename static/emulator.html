@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" id="dynamic-favicon" href="favicon.png">
+  <title id="dynamic-title">Home</title>
+  <link rel="stylesheet" href="/assets/styles/main.css">
+  <link rel="stylesheet" href="/assets/styles/home.css">
+  <link rel="stylesheet" href="/assets/styles/theme/solid/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
+  <style>
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      margin-right: 20px;
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 20px; /* Adjusted padding for a more uniform appearance */
+      font-size: 15px;
+      font-weight: bold;
+      background-color: #363636;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="fixed-nav-bar">
+    <div class="fixed-nav-bar-container"><a class="icon" href="/./"><img id="INImg" src="main.png" alt="Logo"></a></div>
+    <div class="fixed-nav-bar-right">
+	<a class="navbar-link" href="/./local-news"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
+         <a class="navbar-link" href="/./events"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>      
+         <a class="navbar-link" href="/./news"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
+         <a class="navbar-link" href="/./diagnostic"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a>
+    </div>
+  </div>
+  <div id="particles-js" class="main">
+    <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
+    <div class="main">
+      <!-- Add the iframe for /EmulatorJs/index.html and center it with rounded corners -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <iframe src="/EmulatorJs/index.html" width="800" height="600" frameborder="0" style="border-radius: 10px; margin-top: 150px;"></iframe>
+      </div>
+      <div class="button-container">
+        <button class="gba-roms">GBA Roms</button>
+        <button class="gameboy-roms" style="text-align: center; margin-bottom: 15px;">GameBoy Roms</button>
+        <button class="n64-roms">N64 Roms</button>
+        <button class="nes-roms">NES Roms</button>
+        <button class="snes-roms">SNES Roms</button>
+      </div>
+
+      <div style="margin-bottom: 100px"></div>
+    </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-WKJQ5QHQTJ');
+    </script>
+    <script src="/assets/scripts/global.js"></script>
+    <script src="/assets/scripts/settings.js"></script>
+    <script>
+      document.querySelector(".gba-roms").addEventListener("click", () => {
+        window.open("https://archive.org/download/nointro.gba", "_blank");
+      });
+      document.querySelector(".gameboy-roms").addEventListener("click", () => {
+        window.open("https://archive.org/download/nointro.gb", "_blank");
+      });
+      document.querySelector(".n64-roms").addEventListener("click", () => {
+        window.open("https://archive.org/download/nointro.n64", "_blank");
+      });
+      document.querySelector(".nes-roms").addEventListener("click", () => {
+        window.open("https://archive.org/download/nointro.nes", "_blank");
+      });
+      document.querySelector(".snes-roms").addEventListener("click", () => {
+        window.open("https://archive.org/download/nointro.snes", "_blank");
+      });
+    </script>
+    <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
+</body>
+
+</html>
