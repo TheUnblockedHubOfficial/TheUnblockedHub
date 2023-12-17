@@ -22,9 +22,6 @@
 
 You can **NOT** deploy to Netlify, Cloudflare Pages, Github Pages or any other **static** Web Host.
 
-> **Note**
-> Join our [Discord Server](https://discord.gg/interstellar) for more options & tutorials.
-
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://replit.com/github/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg"></a>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
@@ -41,7 +38,7 @@ You can **NOT** deploy to Netlify, Cloudflare Pages, Github Pages or any other *
 - Paste the code below. (Ctrl + Shift + V)
 - `git clone https://github.com/TheUnblockedHubOfficial/TheUnblockedHub`
 6. Once it's done cloning paste the code below. (Ctrl + Shift + V)
-- ``cd interstellar && npm i && npm run start``
+- ``cd TheUnblockedHub && npm i && npm run start``
 
 ## Quick Deploy to GitHub Codespaces
 1. Create a GitHub account if you haven't already
@@ -51,9 +48,6 @@ You can **NOT** deploy to Netlify, Cloudflare Pages, Github Pages or any other *
 5. Go to the ports tab on the top (next to the terminal tab), and then click the website that appears on the list.
 6. For subsequent uses in the same codespace, just run `npm run start`
 
-
-## If you need any help with deploying, join our Discord!
-- https://discord.gg/interstellar
 
 > **Note**
 > If you have any problems please open an issue, so we can fix it ASAP!<br>
