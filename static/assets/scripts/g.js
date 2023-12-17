@@ -795,7 +795,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {  
             name: "FNAF 2",
             link: "https://kbhgames.com/game/five-nights-freddys-2",
-            image: "/assets/media/icons/fnaf2.webp",
+            image: "/assets/media/icons/FNAF2.webp",
             categories: ["all"],
             error: false
     },
