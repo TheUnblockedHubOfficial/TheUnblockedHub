@@ -59,6 +59,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     localStorage.setItem("icon", "/assets/media/favicon/ixl.png");
   }
   
+  else if (selectedValue === 'Canvas') {
+    icon.setAttribute('href', '/assets/media/favicon/canvas.png');
+    name.textContent = 'Dashboard';
+    localStorage.setItem("name", "Dashboard");
+    localStorage.setItem("icon", "/assets/media/favicon/canvas.png");
+} 
+
   var themeid = localStorage.getItem("theme");
   //Loads theme
   themeEle = document.createElement("link");

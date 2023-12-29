@@ -3,5 +3,6 @@
     "description": "?",
     "repository": "https://github.com/theunblockedhubofficial/theunblockedhub",
     "logo": "https://github.com/theunblockedhubofficial/theunblockedhub/main/static/main.png",
-    "keywords": ["school", "math"]
-  }
+    "keywords": ["school", "math"],
+    "image": "heroku/nodejs"
+}
