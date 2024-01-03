@@ -570,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {  
       name: "Devast.io",
       link: "https://devast.io",
-      image: "/assets/media/icons/devast.io.webp",
+      image: "/assets/media/icons/IMG_3897.png",
       categories: ["all", "2P"],
       error: false
     },
