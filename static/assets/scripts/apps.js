@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: "Soundboard",
       link: "https://www.myinstants.com/en/categories/sound%20effects/",
-      image: "/assets/media/icons/soundboard.png",
+      image: "/assets/media/icons/IMG_3898.png",
       categories: ["all", "media"],
       error: false
     },
