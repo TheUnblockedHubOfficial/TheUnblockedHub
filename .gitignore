@@ -1,6 +1,4 @@
-
+node_modules
+package-lock.json
+.idea
 .DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-static/.DS_Store
