@@ -1,6 +1,6 @@
 <div align="center">
     <h1>The Unblocked Hub</h1>
-    <h3>TOne of the most popular web proxies, used by over 2.5+ million people in 2023.</h3>
+    <h3>One of the most popular web proxies, used by over 2.5+ million people in 2023.</h3>
     
 </div>
 
