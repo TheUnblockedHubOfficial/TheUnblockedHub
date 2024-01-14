@@ -1,6 +1,6 @@
 <div align="center">
-    <h1>The Unblocked Hub V2</h1>
-    <h3>The Unblocked Hub is one of the most modern and popular unblocking sites.</h3>
+    <h1>The Unblocked Hub</h1>
+    <h3>TOne of the most popular web proxies, used by over 2.5+ million people in 2023.</h3>
     
 </div>
 
@@ -20,7 +20,9 @@
 
 <h2 align="center">Deployment</h2>
 
-You can **NOT** deploy to Netlify, Cloudflare Pages, Github Pages or any other **static** Web Host.
+### Easy Deployment
+
+**Note:** You **cannot** deploy to static web hosts, including Netlify, Cloudflare Pages, and GitHub Pages.
 
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://replit.com/github/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg"></a>
@@ -28,31 +30,31 @@ You can **NOT** deploy to Netlify, Cloudflare Pages, Github Pages or any other *
 <a target="_blank" href="https://render.com/deploy?repo=https://github.com/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Deploy to Render" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg"></a>
 <a target="_blank" href="https://app.cyclic.sh/api/app/deploy/TheUnblockedHubOfficial/TheUnblockedHub"><img alt="Deploy to Cyclic" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg"></a>
 
-## Deploy to Replit
-As of 01/01/2024, Replit is [no longer free]
-1. Create a Replit Account (https://replit.com)
-2. Click **+ Create Repl**
-3. Click **Template** and Change the language to **Node.js**
-4. Then click **Create Repl**
-5. Click **Shell**
-- Paste the code below. (Ctrl + Shift + V)
-- `git clone https://github.com/TheUnblockedHubOfficial/TheUnblockedHub`
-6. Once it's done cloning paste the code below. (Ctrl + Shift + V)
-- ``cd TheUnblockedHub && npm i && npm run start``
+## Deployment Alternatives:
 
-## Quick Deploy to GitHub Codespaces
-1. Create a GitHub account if you haven't already
-2. Scroll up, click "Code" (green button), and then "Create Codespace on main"
-3. In the terminal on the bottom, paste `npm i && npm run start`
-4. You'll see a popup on the corner about an application. Click "Make public"``
-5. Go to the ports tab on the top (next to the terminal tab), and then click the website that appears on the list.
+#### What happened to Replit Deployment?
+
+As of January 1st 2024, Replit is [no longer free](https://blog.replit.com/hosting-changes). Try GitHub Codespaces instea
+
+##GitHub Codespaces
+
+1. Create a GitHub account if you haven't already.
+2. Click "Code" (green button), and then "Create Codespace on main".
+3. In the terminal at the bottom, paste `npm i && npm run start`
+4. Respond to the application popup by clicking "Make public".
+5. Access the deployed website from the ports tab.
 6. For subsequent uses in the same codespace, just run `npm run start`
 
+## Need Help with Deployment?
 
-> **Note**
-> If you have any problems please open an issue, so we can fix it ASAP!<br>
+If you're having trouble, reach out to us via [Email](mailto:mail@theunblockedhub.com)
+
+### Report Issues:
+
+If you encounter problems, open an issue on GitHub, and we'll address it promptly.
 
 # Credits
-Huge thanks to following people for contributing to The Unblocked Hub!
 
-[![Contrib](https://contrib.rocks/image?repo=TheUnblockedHubOfficial/TheUnblockedHub)](https://github.com/TheUnblockedHubOfficial/TheUnblockedHub/graphs/contributors)
+A Huge thank you to all of the people who have contributed to The Unblocked Hub!
+
+[![Contributotrs](https://contrib.rocks/image?repo=TheUnblockedHubOfficial/TheUnblockedHub)](https://github.com/TheUnblockedHubOfficial/TheUnblockedHub/graphs/contributors)
