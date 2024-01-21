@@ -5,7 +5,6 @@ import { createBareServer } from '@tomphttp/bare-server-node'
 import path from 'node:path'
 import cors from 'cors'
 import config from './config.js'
-
 const __dirname = process.cwd()
 const server = http.createServer()
 const app = express(server)
@@ -33,7 +32,7 @@ const routes = [
   { path: '/e', file: 'now.html' },
 ]
 
-app.get('/w/*', cors({ origin: false }), async (req, res, next) => {
+app.get('/y/*', cors({ origin: false }), async (req, res, next) => {
   try {
     const reqTarget = `https://raw.githubusercontent.com/ypxa/y/main/${req.params[0]}`
     const asset = await fetch(reqTarget)
