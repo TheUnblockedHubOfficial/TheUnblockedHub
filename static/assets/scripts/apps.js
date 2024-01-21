@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Android',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.uncube.launcher3&partner=interstellar',
+      image: '/assets/media/icons/android.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'Ani Watch',
       link: 'https://aniwatch.to',
       image: '/assets/media/icons/apps/aniwatch.webp',
@@ -51,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Character AI',
+      link: 'https://now.gg/iframe/snippet?app_pkg=ai.character.app&partner=interstellar',
+      image: '/assets/media/icons/characterai.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'ChatGPT Clone',
       link: 'https://chat.shuttleai.app/',
       image: '/assets/media/icons/chatgpt.png',
@@ -76,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://canary.discord.com',
       image: '/assets/media/icons/apps/discord.jpg',
       categories: ['all', 'social'],
-      error: false,
     },
     {
       name: 'Discord - Login',
@@ -168,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://hdtoday.tv',
       image: '/assets/media/icons/hd.png',
       categories: ['all', 'media', 'stream'],
-      error: false,
     },
     {
       name: 'Hulu',
@@ -191,9 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: ['all', 'game'],
     },
     {
-      name: 'Now.GG (Alternative)',
+      name: 'Now.GG (NowGG.nl)',
       link: 'https://nowgg.nl',
-      image: '/assets/media/icons/now-gg.png',
+      image: '/assets/media/icons/astroid.png',
       categories: ['all', 'game'],
     },
     {
@@ -389,6 +401,14 @@ document.addEventListener('DOMContentLoaded', () => {
           alert(app.say)
         }
         blank(app.link)
+        return false
+      }
+    } else if (app.now) {
+      link.onclick = function () {
+        if (typeof app.say !== 'undefined') {
+          alert(app.say)
+        }
+        now(app.link)
         return false
       }
     } else {

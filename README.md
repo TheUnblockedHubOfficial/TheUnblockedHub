@@ -16,6 +16,9 @@
     <li>Built-In Tab System</li>
     <li>Clean UI</li>
     <li>Inspect Element</li>
+    <li>Now.GG Suppot</li>
+    <li>Built in Password Protection</li>
+    <li>Geforce Now Support</li>
 </ul>
 
 <h2 align="center">Deployment</h2>
@@ -42,8 +45,16 @@ As of January 1st 2024, Replit is [no longer free](https://blog.replit.com/hosti
 2. Click "Code" (green button), and then "Create Codespace on main".
 3. In the terminal at the bottom, paste `npm i && npm run start`
 4. Respond to the application popup by clicking "Make public".
+   > Make sure you actually click the "Make public." button, or the proxy won't function properly.
 5. Access the deployed website from the ports tab.
 6. For subsequent uses in the same codespace, just run `npm run start`
+
+### Solution for if there is no popup.
+
+1. Edit the `index.js` file and edit the **Port** to a different number, don't use 8080.
+2. Click Terminal, and paste `npm i && npm run start`.
+3. Go to the ports tab, Click Foward A Port, And type the port number.
+4. Right click Visibility and set Port Visibility to Public.
 
 ## Need Help with Deployment?
 

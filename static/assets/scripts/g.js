@@ -134,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Akinator',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.digidust.elokence.akinator.freemium&partner=interstellar',
+      image: '/assets/media/icons/akinator.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'Amazing Strange Rope Police',
       link: 'https://www.crazygames.com/game/amazing-strange-rope-police-vice-spider',
       image: '/assets/media/icons/asrp.avif',
@@ -144,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Among Us',
       link: 'https://now.gg/play/innersloth-llc/4047/among-us',
       image: '/assets/media/icons/among-us.png',
-      categories: ['all', '2P'],
+      categories: ['all', '2P', 'emu', 'android'],
       error: false,
     },
     {
@@ -181,6 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
       image: '/assets/media/icons/awesometanks.jpg',
       categories: ['all'],
       error: false,
+    },
+    {
+      name: 'Aptoide',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.aptoide.partners.nowgg.store&partner=interstellar',
+      image: '/assets/media/icons/aptoide.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
     },
     {
       name: 'Archery World Tour',
@@ -375,14 +389,14 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'BTD Battles',
       link: 'https://now.gg/play/ninja-kiwi/3146/bloons-td-battles',
       image: '/assets/media/icons/bloons-td-battles.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'emu', 'android'],
       error: false,
     },
     {
       name: 'BTD Battles 2',
       link: 'https://now.gg/play/ninja-kiwi/1403/bloons-td-battles-2',
       image: '/assets/media/icons/bloons-td-battles-2.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'android'],
       error: false,
     },
     {
@@ -501,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'COD Mobile',
       link: 'https://now.gg/play/activision-publishing-inc/7935/call-of-duty',
       image: '/assets/media/icons/call-of-duty.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'android'],
       error: false,
     },
     {
@@ -515,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Cookie Run Kingdom',
       link: 'https://now.gg/play/devsisters-corporation/3475/cookie-run',
       image: '/assets/media/icons/cookie-run.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'android'],
       error: false,
     },
     {
@@ -713,6 +727,20 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'EA SPORTS FC™ MOBILE 24 SOCCER',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.ea.gp.fifamobile&partner=interstellar',
+      image: '/assets/media/icons/easports-fcmobile24.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
+      name: 'EA SPORTS™ UFC® Mobile 2',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.ea.gp.easportsufc2&partner=interstellar',
+      image: '/assets/media/icons/easports-ufc.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'Electric Man 2',
       link: 'https://www.addictinggames.com/action/electric-man-2',
       image: '/assets/media/icons/electricman-2.webp',
@@ -826,11 +854,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     {
-      name: 'Fortnite',
+      name: 'Fortnite (PC)',
       link: 'https://play.geforcenow.com/mall/#/deeplink?game-id=46bfab06-d864-465d-9e56-2d9e45cdee0a',
       image: '/assets/media/icons/fortnite.webp',
       categories: ['all', '2P'],
       error: false,
+    },
+    {
+      name: 'Fortnite (Android)',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.epicgames.fortnite&partner=interstellar',
+      image: '/assets/media/icons/fortnite.jpg',
+      categories: ['all', 'emu', 'android', '2P'],
+      now: true,
     },
     {
       name: 'Flappy Bird',
@@ -889,6 +924,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Free Fire',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.dts.freefireth&partner=interstellar',
+      image: '/assets/media/icons/freefire.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'Fruit Ninja',
       link: 'https://www.crazygames.com/game/fruit-ninja',
       image: '/assets/media/icons/fn.png',
@@ -899,7 +941,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Gacha Life 2',
       link: 'https://now.gg/apps/lunime/5691/gacha-life-2.html',
       image: '/assets/media/icons/gacha-life-2.png',
-      categories: ['all', '2P', 'emu'],
+      categories: ['all', '2P', 'emu', 'android'],
       error: false,
     },
     {
@@ -915,6 +957,13 @@ document.addEventListener('DOMContentLoaded', () => {
       image: '/assets/media/icons/getawayshootout.jpeg',
       categories: ['all'],
       error: false,
+    },
+    {
+      name: 'Genshin Impact',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.miHoYo.GenshinImpact&partner=interstellar',
+      image: '/assets/media/icons/genshinimpact.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
     },
     {
       name: 'Gladihoppers',
@@ -1189,7 +1238,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Madden NFL 24',
       link: 'https://now.gg/play/electronic-arts/1731/madden-nfl-24-mobile-football',
       image: '/assets/media/icons/madden-nfl-24-mobile-football.png',
-      categories: ['all', 'sports'],
+      categories: ['all', 'sports', 'android'],
       error: false,
     },
     {
@@ -1212,6 +1261,13 @@ document.addEventListener('DOMContentLoaded', () => {
       image: '/assets/media/icons/mario-kart-64.webp',
       categories: ['all', 'emu'],
       error: false,
+    },
+    {
+      name: 'Melon Playground',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.studio27.MelonPlayground&partner=interstellar',
+      image: '/assets/media/icons/melonplayground.webp',
+      categories: ['all', 'emu', 'android'],
+      now: true,
     },
     {
       name: 'Merge Fruit',
@@ -1259,7 +1315,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Monster Legends',
       link: 'https://now.gg/apps/social-point/1193/monster-legends.html',
       image: '/assets/media/icons/monster-legends.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'android'],
       error: false,
     },
     {
@@ -1668,15 +1724,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Roblox',
-      link: 'https://now.gg/play/roblox-corporation/5349/roblox',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.roblox.client&partner=interstellar',
       image: '/assets/media/icons/roblox.png',
-      categories: ['all', '2P', 'emu'],
+      categories: ['all', '2P', 'emu', 'android'],
     },
     {
-      name: 'Roblox (Alternative)',
-      link: 'https://nowgg.nl/play/roblox-corporation/5349/roblox',
-      image: '/assets/media/icons/roblox.png',
-      categories: ['all', 'emu', '2P'],
+      name: 'Roblox (NowGG.nl)',
+      link: 'https://nowgg.nl/iframe/snippet?app_pkg=com.roblox.client&partner=interstellar',
+      image: '/assets/media/icons/astroid.png',
+      categories: ['all', 'emu', '2P', 'android'],
     },
     {
       name: 'Robostorm',
@@ -1815,7 +1871,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Smash Karts',
       link: 'https://now.gg/play/tall-team/51304/smash-karts',
       image: '/assets/media/icons/smashkarts.webp',
-      categories: ['all', '2P', 'emu'],
+      categories: ['all', '2P', 'emu', 'android'],
       error: false,
     },
     {
@@ -1838,6 +1894,13 @@ document.addEventListener('DOMContentLoaded', () => {
       image: '/assets/media/icons/soccerrandom.jpeg',
       categories: ['all', '2P', 'sports'],
       error: false,
+    },
+    {
+      name: 'Solar Smash',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.paradyme.solarsmash&partner=interstellar',
+      image: '/assets/media/icons/solarsmash.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
     },
     {
       name: 'Space',
@@ -1888,6 +1951,14 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: ['all', '2P'],
       error: false,
     },
+    {
+      name: 'Stumble Guys (Android)',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.kitkagames.fallbuddies&partner=interstellar',
+      image: '/assets/media/icons/stumbleguys.jpeg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+
     {
       name: 'Stumble Guys Clone',
       link: 'https://stumble-guys.io/stumble-guys.embed',
@@ -2039,7 +2110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'The Battle Cats',
       link: 'https://now.gg/apps/ponos-corporation/1587/the-battle-cats.html',
       image: '/assets/media/icons/the-battle-cats.png',
-      categories: ['all', 'emu'],
+      categories: ['all', 'emu', 'android'],
       error: false,
     },
     {
@@ -2055,6 +2126,27 @@ document.addEventListener('DOMContentLoaded', () => {
       image: '/assets/media/icons/tinyfishing.jpg',
       categories: ['all'],
       error: false,
+    },
+    {
+      name: 'Toca Life World',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocalifeworld&partner=interstellar',
+      image: '/assets/media/icons/tocalifeworld.jpg',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
+      name: 'Toca Hair Salon 4',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocahairsalon4&partner=interstellar',
+      image: '/assets/media/icons/tocabocahairsalon4.png',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
+      name: 'Toca Kitchen 2',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocakitchen2&partner=interstellar',
+      image: '/assets/media/icons/tocakitchen2.webp',
+      categories: ['all', 'emu', 'android'],
+      now: true,
     },
     {
       name: 'Top War',
@@ -2196,6 +2288,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'WorldBox',
+      link: 'https://now.gg/iframe/snippet?app_pkg=com.mkarpenko.worldbox&partner=interstellar',
+      image: '/assets/media/icons/worldbox.webp',
+      categories: ['all', 'emu', 'android'],
+      now: true,
+    },
+    {
       name: 'xx142-b2exe',
       link: 'https://www.crazygames.com/embed/xx142-b2-exe',
       image: '/assets/media/icons/xb.png',
@@ -2270,8 +2369,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof app.say !== 'undefined') {
           alert(app.say)
         }
-        saveToLocal(app.link)
-        window.location.href = '/w'
+        window.location.href = app.link
         return false
       }
     } else if (app.blank) {
@@ -2280,6 +2378,14 @@ document.addEventListener('DOMContentLoaded', () => {
           alert(app.say)
         }
         blank(app.link)
+        return false
+      }
+    } else if (app.now) {
+      link.onclick = function () {
+        if (typeof app.say !== 'undefined') {
+          alert(app.say)
+        }
+        now(app.link)
         return false
       }
     } else {
