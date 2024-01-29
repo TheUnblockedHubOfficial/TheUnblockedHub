@@ -16,7 +16,7 @@
     <li>Built-In Tab System</li>
     <li>Clean UI</li>
     <li>Inspect Element</li>
-    <li>Now.GG Suppot</li>
+    <li>Now.GG Support</li>
     <li>Built in Password Protection</li>
     <li>Geforce Now Support</li>
 </ul>

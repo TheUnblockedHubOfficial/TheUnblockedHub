@@ -6,8 +6,7 @@
     <link rel="shortcut icon" id="dynamic-favicon" href="favicon.png" />
     <title id="dynamic-title">Home</title>
     <link rel="stylesheet" href="/assets/styles/main.css" />
-    <link rel="stylesheet" href="/assets/styles/home.css" />
-    <link rel="stylesheet" href="/assets/styles/theme/solid/default.css" />
+    <link rel="stylesheet" href="/assets/styles/theme/default.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -18,14 +17,13 @@
       <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       <div class="main">
         <div class="search-container">
-          <form method="POST">
-            <input
-              class="main-search"
-              type="text"
-              name="query"
-              placeholder="^Search with Google or enter URL in the address bar above^"
-              readonly />
-          </form>
+          <input
+            class="main-search"
+            type="text"
+            id="searchInput"
+            name="query"
+            placeholder="Search with Google or enter URL in the address bar above" />
+          <button onclick="handleSearch()">Search</button>
         </div>
       </div>
     </div>
@@ -43,7 +41,7 @@
       gtag('js', new Date())
       gtag('config', 'G-BXXFB14K33')
     </script>
-    <script src="/assets/scripts/global.js"></script>
-    <script src="/assets/scripts/settings.js"></script>
+    <script src="/assets/scripts/global.js?v=3"></script>
+    <script src="/assets/scripts/settings.js?v=1"></script>
   </body>
 </html>

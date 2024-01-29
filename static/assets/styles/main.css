@@ -11,6 +11,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -60,11 +65,19 @@ body {
 }
 
 .footer {
+  background-color: transparent;
+  color: white;
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 101;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-spacing {
+  margin-left: 250px; /* Adjust the value as needed */
 }
 
 .lower-footer {
@@ -384,7 +397,199 @@ select {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0px 0px 5px 5px;
-  margin-top: 30vh;
-  margin-bottom: 5vh;
+  margin-top: 30vh; /* Adjusted margin-top */
+  margin-bottom: 2vh; /* Adjusted margin-bottom */
   text-shadow: 2px 4px 6px rgb(0, 0, 0, 0.2);
+}
+
+@media (orientation: portrait) {
+  .title {
+    position: relative;
+    top: -10vw;
+    font-size: 10vw;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+.description {
+  position: absolute;
+  top: 240px;
+  font-size: 35px;
+  color: snow;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  border-radius: 0px 0px 5px 5px;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.main {
+  letter-spacing: 0px;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  position: absolute;
+  z-index: 99;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0vw;
+  background-color: var(--bg-c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+
+.particles-js-canvas-el {
+  z-index: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shortcut-container {
+  height: 6vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.shortcut {
+  width: 5vw;
+  height: 5vw;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 1vh;
+  transition: all 0.3s;
+}
+
+.shortcut:hover {
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: all 0.3s;
+}
+
+#geforce {
+  background: url('../media/icons/gfn.png');
+  background-size: cover;
+}
+
+#roblox {
+  background: url('../media/icons/roblox.png');
+  background-size: cover;
+}
+
+#discord {
+  background: url('../media/icons/discord.jpg');
+  background-size: cover;
+}
+
+#eagler {
+  background: url('../media/icons/mc.webp');
+  background-size: cover;
+}
+
+#youtube {
+  background: url('../media/icons/youtube.png');
+  background-size: cover;
+}
+
+#tiktok {
+  background: url('../media/icons/tiktok.png');
+  background-size: cover;
+}
+.back-to-hub-button {
+  display: inline-block;
+  margin-top: 5vh; /* Adjusted margin-top */
+  margin-bottom: 15px; /* Adjusted margin-bottom */
+  padding: 20px 80px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #363636;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.back-to-hub-button:hover {
+  background-color: #767676; /* Darker color when hovered */
+}
+
+.request-button {
+  display: inline-block;
+  margin-top: 0px; /* Adjusted margin-top */
+  margin-bottom: 15px; /* Adjusted margin-bottom */
+  padding: 20px 80px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #363636;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.request-button:hover {
+  background-color: #767676; /* Darker color when hovered */
+}
+.report-button {
+  display: inline-block;
+  margin-top: 0px; /* Adjusted margin-top */
+  margin-bottom: 20px; /* Adjusted margin-bottom */
+  padding: 20px 80px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #363636;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.report-button:hover {
+  background-color: #767676; /* Darker color when hovered */
+}
+
+#splashtext {
+  font-size: 24px; /* Adjusted font size */
+  color: white;
+  font-family: sans-serif; /* Replace 'YourCustomFont' with the actual font name */
+}
+.clock {
+  text-decoration: none;
+  position: absolute;
+  background-color: rgba(48, 48, 48, 0.693);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.4);
+  width: 150px;
+  font-family: poppins;
+  font-size: 18px;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  border-radius: 10px;
+  color: white; /* Set the text color to white */
+  transform: translateX(-50%);
+  text-align: center; /* Center the text */
+  background-attachment: fixed;
+  order: -1;
+  margin-top: 10px;
 }

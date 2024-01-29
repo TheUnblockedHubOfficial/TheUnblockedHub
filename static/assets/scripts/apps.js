@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const appsList = [
     {
-      name: 'Request!',
-      link: 'https://forms.gle/kpytK9JfJYUptMP28',
-      image: '/assets/media/icons/request.webp',
-      categories: ['all', 'game', 'cloud', 'stream', 'social', 'media', 'AI', 'message', 'tool'],
-      error: false,
+      name: 'Addicting Games',
+      link: 'https://www.addictinggames.com/',
+      image: '/assets/media/icons/apps/addictinggames.jpg',
+      categories: ['all'],
     },
     {
       name: 'Amazon',
@@ -355,6 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nonPinnedApps = document.querySelector('.container-apps')
   const pinnedApps = document.querySelector('.pinned-apps')
+
   var pinList = localStorage.getItem('pinnedGames')
   try {
     pinList = pinList.split(',').map(Number)
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof app.say !== 'undefined') {
           alert(app.say)
         }
-        images(app.link)
+        go(app.link)
         return false
       }
     }
@@ -451,6 +451,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     appInd++
   })
+  console.log('appsContainer:', appsContainer)
+  console.log('pinnedApps:', pinnedApps)
+  console.log('nonPinnedApps:', nonPinnedApps)
+
   appsContainer.appendChild(pinnedApps)
   appsContainer.appendChild(nonPinnedApps)
 })

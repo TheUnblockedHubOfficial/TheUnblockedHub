@@ -1,34 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
    <meta charset="UTF-8" />
    <meta name="referrer" content="no-referrer">
    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-   <link rel="shortcut icon" id="dynamic-favicon" href="favicon.png">
-   <title id="dynamic-title">Home</title>
-   <script src="/assets/scripts/global.js?v=1"></script>
-   <link rel="stylesheet" href="/assets/styles/main.css">
-   <link rel="stylesheet" href="/assets/styles/settings.css">
-   <link rel="stylesheet" href="/assets/styles/theme/solid/default.css?v=1">
+   <link rel="shortcut icon" id="tab-favicon" href="favicon.png">
+   <title id="tab-title">Home</title>
+   <script src="/assets/scripts/global.js?v=3"></script>
+   <link rel="stylesheet" href="/assets/styles/main.css?v=1">
+   <link rel="stylesheet" href="/assets/styles/settings.css?v=1">
+   <link rel="stylesheet" href="/assets/styles/themes/default.css?v=1" />
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
 </head>
-<!-- Nav Bar Start-->
-<div class="fixed-nav-bar">
-   <a class="icon" href="/./"><img id="INImg" src="main.png"></a>
-     <div class="fixed-nav-bar-right">
-	<a class="navbar-link" href="/./0"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
+<body>
+   <!-- Nav Bar Start-->
+   <div class="fixed-nav-bar">
+      <a class="icon" href="/./"><img id="INImg" src="/assets/media/favicon/main.png"></a>
+      <div class="fixed-nav-bar-right">
+         <a class="navbar-link" href="/./0"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
          <a class="navbar-link" href="/./-"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>      
          <a class="navbar-link" href="/./~"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
-	<a class="navbar-link" href="/./_"><span class="material-symbols-outlined weird-icon">computer</span>Emulator</a>
-      </div></div></div></div>
-<!-- Nav Bar End-->
-<div class="main">
-   <div class="settings-container">
+         <a class="navbar-link" href="/./_"><span class="material-symbols-outlined weird-icon">computer</span>Emulator</a>
+      </div>
+   </div>
+   <!-- Nav Bar End-->
+   <div class="main">
+      <div class="settings-container">
       <div class="settings-card">
          <h3>About:Blank</h3>
-         <p>Cloak the site in an about:blank page.</p>
-         <button onclick="AB()">Open Popup</button>
+         <p>Cloak the site in an about:blank page and toggle about:blank on startup (enabled by default)</p>
+         <button onclick="AB()" class="key-button">Open Popup</button>
+         <button class="key-button" onclick="toggleAB()">Toggle automatic about:blank</button>
       </div>
           <div class="settings-card">
         <h3>Set Panic Key</h3>
@@ -82,7 +86,7 @@
             <option value="midnight">Dark Mode</option>
             <option value="light">Light Mode</option>
             <option value="ocean-blue">Ocean Blue</option>
-	    <option disabled selected>Catppuccin Themes</option>
+            <option disabled selected>Catppuccin Themes</option>
             <option value="catppuccinMocha">Mocha</option>
             <option value="catppuccinMacchiato">Macchiato</option>
             <option value="catppuccinFrappe">Frappe</option>
@@ -109,13 +113,13 @@
       </div>
    </div>
 </div>
-<script src="/assets/scripts/settings.js"></script>
+<script src="/assets/scripts/settings.js?v=2"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
 <script>
    window.dataLayer = window.dataLayer || [];
    function gtag(){dataLayer.push(arguments);}
    gtag('js', new Date());
-   
    gtag('config', 'G-7T3R5WJJRV');
 </script>
 </body>
+</html>

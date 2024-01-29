@@ -1,99 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" id="dynamic-favicon" href="favicon.png">
-  <title id="dynamic-title">Home</title>
-  <link rel="stylesheet" href="/assets/styles/main.css">
-  <link rel="stylesheet" href="/assets/styles/home.css">
-  <link rel="stylesheet" href="/assets/styles/theme/solid/default.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
-  <style>
-    .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .button-container button {
-      margin-right: 20px;
-      display: inline-block;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding: 20px; /* Adjusted padding for a more uniform appearance */
-      font-size: 15px;
-      font-weight: bold;
-      background-color: #363636;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-  </style>
-
-</head>
-
-<body>
-  <div class="fixed-nav-bar">
-    <div class="fixed-nav-bar-container"><a class="icon" href="/./"><img id="INImg" src="main.png" alt="Logo"></a></div>
-    <div class="fixed-nav-bar-right">
-	<a class="navbar-link" href="/./0"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
-         <a class="navbar-link" href="/./-"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>      
-         <a class="navbar-link" href="/./~"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
-         <a class="navbar-link" href="/./!"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a>
-    </div>
-  </div>
-  <div id="particles-js" class="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+    <title id="tab-title">Home</title>
+    <link rel="stylesheet" href="/assets/styles/main.css?v=1" />
+    <link rel="stylesheet" href="/assets/styles/themes/default.css?v=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.css" />
     <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
-    <div class="main">
-      <!-- Add the iframe for /EmulatorJs/index.html and center it with rounded corners -->
-      <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <iframe src="/EmulatorJS/index.html" width="800" height="600" frameborder="0" style="border-radius: 10px; margin-top: 150px;"></iframe>
+    <style>
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .key-button {
+        cursor: pointer;
+        border: 2px;
+        transition: 0.2s;
+        margin-top: 10px;
+        font-size: 1.3vw;
+        background-color: #333;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        color: white;
+        height: 50px;
+        width: 19%;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: -13.75vh;
+      }
+
+      .button-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .key-button,
+      button {
+        cursor: pointer;
+        border: 2px;
+        transition: 0.2s;
+        margin-top: 10px;
+        background-color: #333;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        color: white;
+        height: 50px;
+        width: calc(19% - 20px); /* Adjusted width and margin for better spacing */
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fixed-nav-bar">
+      <div class="fixed-nav-bar-container">
+        <a class="icon" href="/./"><img alt="nav" id="INImg" src="/assets/media/favicon/main.png" /></a>
+      </div>
+      <div class="fixed-nav-bar-right">
+        <a class="navbar-link" href="/./0"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
+        <a class="navbar-link" href="/./-"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>
+        <a class="navbar-link" href="/./~"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
+        <a class="navbar-link" href="/./!"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a>
+      </div>
+    </div>
+    <div id="particles-js" class="main">
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh">
+        <iframe
+          src="/EmulatorJS/index.html"
+          width="800"
+          height="600"
+          frameborder="0"
+          style="border-radius: 10px; margin-top: 150px"></iframe>
       </div>
       <div class="button-container">
+        <button class="vb-roms">Virtual Boy Roms</button>
+        <button class="smd-roms">Sega Mega Drive Roms</button>
+        <button class="sms-roms">Sega Master system Roms</button>
+        <button class="scd-roms">Sega CD Roms</button>
+        <button class="s32x-roms">Sega 32X Roms</button>
+        <button class="sgg-roms">Sega Game Gear Roms</button>
+        <button class="ss-roms">Sega Saturn Roms</button>
+        <button class="ps1-roms">PlayStations Roms</button>
         <button class="gba-roms">GBA Roms</button>
-        <button class="gameboy-roms" style="text-align: center; margin-bottom: 15px;">GameBoy Roms</button>
+        <button class="ds-roms">DS Roms</button>
         <button class="n64-roms">N64 Roms</button>
         <button class="nes-roms">NES Roms</button>
         <button class="snes-roms">SNES Roms</button>
+        <button class="atarilynx-roms">Atari Lynx Roms</button>
+        <button class="atarijaguar-roms">Atari Jaguar Roms</button>
+        <button class="atari7800-roms">Atari 7800 Roms</button>
+        <button class="atari2600-roms">Atari 2600 Roms</button>
       </div>
 
       <div style="margin-bottom: 100px"></div>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || []
+
+        function gtag() {
+          dataLayer.push(arguments)
+        }
+        gtag('js', new Date())
+        gtag('config', 'G-HXKGGC9S0Q')
+      </script>
+      <script src="/assets/scripts/global.js?v=3"></script>
+      <script src="/assets/scripts/settings.js?v=1"></script>
+      <script>
+        document.querySelector('.vb-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.vb', '_blank')
+        })
+        document.querySelector('.smd-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.md', '_blank')
+        })
+        document.querySelector('.sms-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.ms-mkiii', '_blank')
+        })
+        document.querySelector('.scd-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/rr-sega-mega-cd/iso/unsorted/', '_blank')
+        })
+        document.querySelector('.s32x-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.32x', '_blank')
+        })
+        document.querySelector('.sgg-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.gg', '_blank')
+        })
+        document.querySelector('.ss-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/ef_Sega_Saturn_Collection/Sega%20Saturn/', '_blank')
+        })
+        document.querySelector('.ds-roms').addEventListener('click', () => {
+          window.open(
+            'https://archive.org/download/cylums-nintendo-ds-rom-collection/Cylum%27s%20Nintendo%20DS%20ROM%20Collection/',
+            '_blank'
+          )
+        })
+        document.querySelector('.atarilynx-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/AtariLynxRomCollectionByGhostware', '_blank')
+        })
+        document.querySelector('.atarijaguar-roms').addEventListener('click', () => {
+          window.open(
+            'https://ia902203.us.archive.org/view_archive.php?archive=/4/items/atari-jaguar_202203/Atari%20-%20Jaguar.zip',
+            '_blank'
+          )
+        })
+        document.querySelector('.atari7800-roms').addEventListener('click', () => {
+          window.open(
+            'https://ia601802.us.archive.org/view_archive.php?archive=/1/items/atari-7800-romset/Atari%207800.7z',
+            '_blank'
+          )
+        })
+        document.querySelector('.atari2600-roms').addEventListener('click', () => {
+          window.open(
+            'https://ia802908.us.archive.org/view_archive.php?archive=/33/items/atari-2600-complete-set-2020/Atari%202600%20complete%20set%202020.rar',
+            '_blank'
+          )
+        })
+        document.querySelector('.gba-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.gba', '_blank')
+        })
+        document.querySelector('.n64-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.n64', '_blank')
+        })
+        document.querySelector('.nes-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.nes', '_blank')
+        })
+        document.querySelector('.snes-roms').addEventListener('click', () => {
+          window.open('https://archive.org/download/nointro.snes', '_blank')
+        })
+      </script>
+      <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
     </div>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-HXKGGC9S0Q');
-    </script>
-    <script src="/assets/scripts/global.js"></script>
-    <script src="/assets/scripts/settings.js"></script>
-    <script>
-      document.querySelector(".gba-roms").addEventListener("click", () => {
-        window.open("https://archive.org/download/nointro.gba", "_blank");
-      });
-      document.querySelector(".gameboy-roms").addEventListener("click", () => {
-        window.open("https://archive.org/download/nointro.gb", "_blank");
-      });
-      document.querySelector(".n64-roms").addEventListener("click", () => {
-        window.open("https://archive.org/download/nointro.n64", "_blank");
-      });
-      document.querySelector(".nes-roms").addEventListener("click", () => {
-        window.open("https://archive.org/download/nointro.nes", "_blank");
-      });
-      document.querySelector(".snes-roms").addEventListener("click", () => {
-        window.open("https://archive.org/download/nointro.snes", "_blank");
-      });
-    </script>
-    <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
-</body>
-
+  </body>
 </html>
