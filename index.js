@@ -6,6 +6,7 @@ import { createBareServer } from '@tomphttp/bare-server-node'
 import path from 'node:path'
 import cors from 'cors'
 import config from './config.js'
+import { Analytics } from '@vercel/analytics/react';
 const __dirname = process.cwd()
 const server = http.createServer()
 const app = express(server)
