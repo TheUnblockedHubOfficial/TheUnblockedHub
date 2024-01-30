@@ -1,5 +1,6 @@
 import express from 'express'
 import basicAuth from 'express-basic-auth'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import http from 'node:http'
 import { createBareServer } from '@tomphttp/bare-server-node'
 import path from 'node:path'
