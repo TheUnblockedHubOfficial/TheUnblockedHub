@@ -85,20 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
-      name: 'Discord',
-      link: 'https://canary.discord.com',
-      image: '/assets/media/icons/apps/discord.jpg',
-      categories: ['all', 'social'],
-    },
-    {
-      name: 'Discord - Login',
-      link: 'https://canary.discord.com/login',
-      image: '/assets/media/icons/discord.jpg',
-      categories: ['all', 'social'],
-      blank: 'true',
-      error: false,
-    },
-    {
       name: 'Donitz - itch.io',
       link: 'https://donitz.itch.io/',
       image: '/assets/media/icons/itch.png',
@@ -279,6 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Temu',
+      link: 'https://temu.com',
+      image: '/assets/media/icons/temu.webp',
+      categories: ['all'],
+    },
+    {
       name: 'Tiktok',
       link: 'https://tiktok.com',
       image: '/assets/media/icons/apps/tiktok.png',
@@ -300,9 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
-      name: 'Twitter',
+      name: 'X',
       link: 'https://twitter.com',
-      image: '/assets/media/icons/apps/twitter.png',
+      image: '/assets/media/icons/apps/xlogo.webp',
       categories: ['all', 'social', 'media'],
       error: false,
     },
@@ -324,6 +316,13 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'YouTube',
       link: 'https://youtube.com',
       image: '/assets/media/icons/apps/yt.png',
+      categories: ['all', 'social', 'stream', 'media'],
+      error: false,
+    },
+    {
+      name: 'YouTube Music',
+      link: 'https://music.youtube.com',
+      image: '/assets/media/icons/apps/ytmusic.png',
       categories: ['all', 'social', 'stream', 'media'],
       error: false,
     },
@@ -387,38 +386,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const link = document.createElement('a')
 
-    if (app.local) {
-      link.onclick = function () {
-        if (typeof app.say !== 'undefined') {
-          alert(app.say)
-        }
+    function saveToLocal(path) {
+      sessionStorage.setItem('GoUrl', path)
+    }
+
+    function handleClick(app) {
+      if (typeof app.say !== 'undefined') {
+        alert(app.say)
+      }
+
+      if (app.local) {
+        saveToLocal(app.link)
+        window.location.href = '&'
+      } else if (app.local2) {
+        saveToLocal(app.link)
         window.location.href = app.link
-        return false
-      }
-    } else if (app.blank) {
-      link.onclick = function () {
-        if (typeof app.say !== 'undefined') {
-          alert(app.say)
-        }
+      } else if (app.blank) {
         blank(app.link)
-        return false
-      }
-    } else if (app.now) {
-      link.onclick = function () {
-        if (typeof app.say !== 'undefined') {
-          alert(app.say)
-        }
+      } else if (app.now) {
         now(app.link)
-        return false
-      }
-    } else {
-      link.onclick = function () {
-        if (typeof app.say !== 'undefined') {
-          alert(app.say)
-        }
+      } else {
         go(app.link)
-        return false
       }
+
+      return false
+    }
+
+    link.onclick = function () {
+      handleClick(app)
     }
 
     const image = document.createElement('img')

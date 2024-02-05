@@ -100,13 +100,15 @@
             window.location.href = "./";
         });
         window.onload = function() {
-            let encodedUrl = sessionStorage.getItem("encodedUrl");
-            encodedUrl = "/a/" + encodedUrl;
-            console.log(encodedUrl);
-            document.querySelector("#iframeid").src = encodedUrl;
+            let GoUrl = sessionStorage.getItem('GoUrl')
+        if (!GoUrl.startsWith('/y/') && !GoUrl.startsWith('/f/')) {
+          GoUrl = '/a/' + GoUrl
+        }
+        console.log(GoUrl)
+        document.querySelector('#iframeid').src = GoUrl
             let iframe = document.querySelector("#iframeId");
-            iframe.src = encodedUrl;
+            iframe.src = GoUrl;
         };
     </script>
-    <script src="/assets/scripts/global.js?v=3"></script>
+    <script src="/assets/scripts/global.js?v=5"></script>
 </body>

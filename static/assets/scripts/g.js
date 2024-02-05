@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: ['all', '2P'],
     },
     {
+      name: 'LOL Shot',
+      link: 'https://Lolshot.io',
+      image: '/assets/media/icons/lolshot.jpg',
+      categories: ['all', '2P'],
+    },
+    {
+      name: 'Barry Has A Secret',
+      link: 'https://sandfella.itch.io/barry-has-a-secret',
+      image: '/assets/media/icons/bhas.png',
+      categories: ['all', 'emu'],
+    },
+    {
       name: '10 Minutes Till Dawn',
       link: 'https://www.crazygames.com/game/10-minutes-till-dawn',
       image: '/assets/media/icons/tmtd.png',
@@ -218,6 +230,12 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://www.crazygames.com/game/rugby-io-ball-mayhem',
       image: '/assets/media/icons/ballmayhem.jpg',
       categories: ['all'],
+    },
+    {
+      name: 'Bandit.RIP',
+      link: 'https://bandit.rip/',
+      image: '/assets/media/icons/banditrip.webp',
+      categories: ['all', '2P'],
     },
     {
       name: 'Basket Random',
@@ -459,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Computer Clicker',
-      link: '/assets/DiBiaseProductions/ComputerClicker/index.html',
+      link: 'assets/DiBiaseProductions/ComputerClicker/index.html',
       image: '/assets/media/icons/computerclicker.png',
       categories: ['all', 'local'],
     },
@@ -472,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Controls',
-      link: '/assets/DiBiaseProductions/Controls/index.html',
+      link: 'assets/DiBiaseProductions/Controls/index.html',
       image: '/assets/media/icons/controls.png',
       categories: ['all', 'local'],
     },
@@ -492,6 +510,12 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Cryzen',
       link: 'https://cryzen.io',
       image: '/assets/media/icons/cryzen.png',
+      categories: ['all'],
+    },
+    {
+      name: 'CSGO Parkour',
+      link: 'https://yandex.com/games/app/203069?flags={%22adv_sticky_banner_disabled%22:true}',
+      image: '/assets/media/icons/csgoparkour.webp',
       categories: ['all'],
     },
     {
@@ -784,6 +808,12 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'FNAF 2',
       link: 'https://kbhgames.com/game/five-nights-freddys-2',
       image: '/assets/media/icons/FNAF2.webp',
+      categories: ['all'],
+    },
+    {
+      name: 'Rodeo Stampede',
+      link: 'https://poki.com/en/g/rodeo-stampede-savannah',
+      image: '/assets/media/icons/RodeoPromo.png',
       categories: ['all'],
     },
     {
@@ -1134,18 +1164,11 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: ['all'],
     },
     {
-      name: 'Minecraft 1.5.2 (Eaglercraft)',
-      link: '/f/minecraft-15/index.html',
+      name: 'Eaglercraft 1.5.2 [Singleplayer]',
+      link: 'https://interstellar-assets.pages.dev/minecraft-15/',
       image: '/assets/media/icons/mc.webp',
       categories: ['all', '2P', 'emu'],
-      local: 'true',
-    },
-    {
-      name: 'Minecraft 1.8 (Eaglercraft)',
-      link: '/f/minecraft-18/index.html',
-      image: '/assets/media/icons/mc.webp',
-      categories: ['all', '2P', 'emu'],
-      local: 'true',
+      blank: 'true',
     },
     {
       name: 'Mineenergy',
@@ -1157,6 +1180,12 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Minecraft Classic',
       link: 'https://classic.minecraft.net',
       image: '/assets/media/icons/mc.webp',
+      categories: ['all', '2P'],
+    },
+    {
+      name: 'mk48.io',
+      link: 'https://mk48.io/',
+      image: '/assets/media/icons/mk48io.jpg',
       categories: ['all', '2P'],
     },
     {
@@ -1716,6 +1745,12 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: ['all'],
     },
     {
+      name: 'Starblast',
+      link: 'https://starblast.io',
+      image: '/assets/media/icons/starblastio.png',
+      categories: ['all', '2P'],
+    },
+    {
       name: 'Stickman Hook',
       link: 'https://poki.com/en/g/stickman-hook?campaign=14726801018&adgroup=126978546909&extensionid=&targetid=kwd-571112182025&loc_interest_ms=&loc_physical_ms=1009839&mt=&gclid=CjwKCAjwzJq5BhBhEiwAUXM4dmw9FC8YNO6NMR-6MoMKI-qJXqOsIyU6hH8RthPwh8uh0E3e6jY6xxoCg-EQAvD_BwE',
       image: '/assets/media/icons/stickman.png',
@@ -2067,10 +2102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ]
 
-  function saveToLocal(path) {
-    localStorage.setItem('savedPaths', path)
-  }
-
   appsList.sort((a, b) => a.name.localeCompare(b.name))
 
   const nonPinnedApps = document.querySelector('.container-apps')
@@ -2107,6 +2138,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const link = document.createElement('a')
 
+    function saveToLocal(path) {
+      sessionStorage.setItem('GoUrl', path)
+    }
+
     function handleClick(app) {
       if (typeof app.say !== 'undefined') {
         alert(app.say)
@@ -2114,10 +2149,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (app.local) {
         saveToLocal(app.link)
-        window.location.href = app.link
-      } else if (app.localW) {
+        window.location.href = '&'
+      } else if (app.local2) {
         saveToLocal(app.link)
-        window.location.href = '/w'
+        window.location.href = app.link
       } else if (app.blank) {
         blank(app.link)
       } else if (app.now) {
