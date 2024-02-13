@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.digidust.elokence.akinator.freemium&partner=interstellar',
       image: '/assets/media/icons/akinator.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Amazing Strange Rope Police',
@@ -138,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/play/innersloth-llc/4047/among-us',
       image: '/assets/media/icons/among-us.png',
       categories: ['all', '2P', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Amidst The Sky',
@@ -181,7 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.aptoide.partners.nowgg.store&partner=interstellar',
       image: '/assets/media/icons/aptoide.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Archery World Tour',
@@ -356,14 +353,12 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/play/ninja-kiwi/3146/bloons-td-battles',
       image: '/assets/media/icons/bloons-td-battles.png',
       categories: ['all', 'emu', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'BTD Battles 2',
       link: 'https://now.gg/play/ninja-kiwi/1403/bloons-td-battles-2',
       image: '/assets/media/icons/bloons-td-battles-2.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'BTTS',
@@ -382,7 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://games.crazygames.com/en_US/buildnow-gg/index.html',
       image: '/assets/media/icons/build-now.webp',
       categories: ['all', '2P'],
-      now: true,
     },
     {
       name: 'Bullet Force Multiplayer',
@@ -473,7 +467,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/play/activision-publishing-inc/7935/call-of-duty',
       image: '/assets/media/icons/call-of-duty.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Computer Clicker',
@@ -486,7 +479,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/play/devsisters-corporation/3475/cookie-run',
       image: '/assets/media/icons/cookie-run.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Controls',
@@ -673,14 +665,12 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.ea.gp.fifamobile&partner=interstellar',
       image: '/assets/media/icons/easports-fcmobile24.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'EA SPORTS™ UFC® Mobile 2',
       link: 'https://now.gg/iframe/snippet?app_pkg=com.ea.gp.easportsufc2&partner=interstellar',
       image: '/assets/media/icons/easports-ufc.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Electric Man 2',
@@ -790,7 +780,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.epicgames.fortnite&partner=interstellar',
       image: '/assets/media/icons/fortnite.jpg',
       categories: ['all', 'emu', 'android', '2P'],
-      now: true,
     },
     {
       name: 'Flappy Bird',
@@ -851,7 +840,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.dts.freefireth&partner=interstellar',
       image: '/assets/media/icons/freefire.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Fruit Ninja',
@@ -864,7 +852,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/apps/lunime/5691/gacha-life-2.html',
       image: '/assets/media/icons/gacha-life-2.png',
       categories: ['all', '2P', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Geometry Dash',
@@ -883,7 +870,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.miHoYo.GenshinImpact&partner=interstellar',
       image: '/assets/media/icons/genshinimpact.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Gladihoppers',
@@ -1130,7 +1116,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.ea.gp.maddennfl21mobile&partner=interstellar',
       image: '/assets/media/icons/maddennfl24.jpeg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Master Archer',
@@ -1155,7 +1140,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.studio27.MelonPlayground&partner=interstellar',
       image: '/assets/media/icons/melonplayground.webp',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Merge Fruit',
@@ -1205,7 +1189,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/apps/social-point/1193/monster-legends.html',
       image: '/assets/media/icons/monster-legends.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'MooMoo.io',
@@ -1566,7 +1549,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.roblox.client&partner=interstellar',
       image: '/assets/media/icons/roblox.png',
       categories: ['all', '2P', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Roblox (NowGG.nl)',
@@ -1693,7 +1675,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/play/tall-team/51304/smash-karts',
       image: '/assets/media/icons/smashkarts.webp',
       categories: ['all', '2P', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Snowball.io',
@@ -1718,7 +1699,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.paradyme.solarsmash&partner=interstellar',
       image: '/assets/media/icons/solarsmash.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Space',
@@ -1773,7 +1753,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.kitkagames.fallbuddies&partner=interstellar',
       image: '/assets/media/icons/stumbleguys.jpeg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
 
     {
@@ -1908,7 +1887,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/apps/ponos-corporation/1587/the-battle-cats.html',
       image: '/assets/media/icons/the-battle-cats.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'The Simpsons',
@@ -1927,21 +1905,18 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocalifeworld&partner=interstellar',
       image: '/assets/media/icons/tocalifeworld.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Toca Hair Salon 4',
       link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocahairsalon4&partner=interstellar',
       image: '/assets/media/icons/tocabocahairsalon4.png',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Toca Kitchen 2',
       link: 'https://now.gg/iframe/snippet?app_pkg=com.tocaboca.tocakitchen2&partner=interstellar',
       image: '/assets/media/icons/tocakitchen2.webp',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Top War',
@@ -2074,7 +2049,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.mkarpenko.worldbox&partner=interstellar',
       image: '/assets/media/icons/worldbox.webp',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'xx142-b2exe',
@@ -2155,8 +2129,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = app.link
       } else if (app.blank) {
         blank(app.link)
-      } else if (app.now) {
-        now(app.link)
       } else {
         go(app.link)
       }

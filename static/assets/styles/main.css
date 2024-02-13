@@ -593,3 +593,61 @@ select {
   order: -1;
   margin-top: 10px;
 }
+.rwd-table {
+  color: #ddd; /* Light text color */
+  border-radius: 15px; /* Adjust as needed */
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #333; /* Dark background color */
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+  position: absolute; /* Position absolute for fixed placement */
+  top: 150px; /* 100px from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.rwd-table tr {
+  border-color: #555; /* Border color */
+  text-align: center;
+}
+
+.rwd-table th,
+.rwd-table td {
+  margin: 0.5em 1em;
+  padding: 1em;
+  background-color: #444; /* Cell background color */
+}
+
+.rwd-table td:before {
+  color: #aaa; /* Lighter text color */
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.rwd-table a {
+  color: #3da6ae; /* Link color */
+}
+
+@media (min-width: 480px) {
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    margin: 0;
+    padding: 1em !important;
+  }
+
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+
+  .rwd-table td:before {
+    display: none;
+  }
+}

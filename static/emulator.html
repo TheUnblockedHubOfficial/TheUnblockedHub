@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.css" />
     <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
     <style>
+      body {
+        overflow-y: hidden;
+        overflow-x: hidden; /* Prevents the scroll bar from appearing on the body */
+      }
+
+      .main {
+        overflow-y: auto; /* Allows scrolling within this container */
+        max-height: 100vh; /* Limiting the height to viewport height */
+      }
+
       .button-container {
         display: flex;
         justify-content: center;
@@ -68,19 +78,20 @@
   <body>
     <div class="fixed-nav-bar">
       <div class="fixed-nav-bar-container">
-        <a class="icon" href="/./"><img alt="nav" id="INImg" src="/assets/media/favicon/main.png" /></a>
+        <a class="icon" href="/./"><img alt="nav" id="UBHLogo" src="/assets/media/favicon/main.png" /></a>
       </div>
       <div class="fixed-nav-bar-right">
         <a class="navbar-link" href="/./0"><i class="fa-solid fa-globe navbar-icon"></i>Browser</a>
         <a class="navbar-link" href="/./-"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>
-        <a class="navbar-link" href="/./~"><span class="material-symbols-outlined weird-icon">apps</span>Apps</a>
+        <a class="navbar-link" href="/./~"><i class="fa-solid fa-th-large navbar-icon"></i>Apps</a>
+        <a class="navbar-link" href="/./*"><i class="fa-solid fa-bookmark navbar-icon"></i>Bookmarklets</a>
         <a class="navbar-link" href="/./!"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a>
       </div>
     </div>
     <div id="particles-js" class="main">
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-      <div style="display: flex; justify-content: center; align-items: center; height: 100vh">
+      <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh">
         <iframe
           src="/EmulatorJS/index.html"
           width="800"
@@ -183,6 +194,17 @@
         document.querySelector('.snes-roms').addEventListener('click', () => {
           window.open('https://archive.org/download/nointro.snes', '_blank')
         })
+      </script>
+      <script>
+        function checkScroll() {
+          var main = document.querySelector('.main')
+          var atBottom = main.scrollHeight - main.scrollTop === main.clientHeight
+          if (atBottom) {
+            document.body.style.overflowY = 'hidden'
+          } else {
+            document.body.style.overflowY = 'auto'
+          }
+        }
       </script>
       <footer>Copyright &copy; 2023 The Unblocked Hub</footer>
     </div>

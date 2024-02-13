@@ -4,7 +4,7 @@ const input = document.querySelector('is')
 if (form && input) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
-    processUrl(input.value, '/&')
+    processUrl(input.value, '/1')
   })
 }
 
@@ -31,11 +31,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, '/&')
-}
-
-function now(value) {
-  processUrl(value, '/e')
+  processUrl(value, '/1')
 }
 
 function blank(value) {

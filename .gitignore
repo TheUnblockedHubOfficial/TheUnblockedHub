@@ -5,3 +5,4 @@ package-lock.json
 .DS_Store
 static/.DS_Store
 .hintrc
+pnpm-lock.yaml

@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=com.uncube.launcher3&partner=interstellar',
       image: '/assets/media/icons/android.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'Ani Watch',
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://now.gg/iframe/snippet?app_pkg=ai.character.app&partner=interstellar',
       image: '/assets/media/icons/characterai.jpg',
       categories: ['all', 'emu', 'android'],
-      now: true,
     },
     {
       name: 'ChatGPT Clone',
@@ -403,8 +401,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = app.link
       } else if (app.blank) {
         blank(app.link)
-      } else if (app.now) {
-        now(app.link)
       } else {
         go(app.link)
       }
