@@ -13,24 +13,49 @@ const PORT = process.env.PORT || 8080
 if (config.challenge) {
   console.log('Password protection is enabled. Usernames are: ' + Object.keys(config.users))
   console.log('Passwords are: ' + Object.values(config.users))
-  app.use(basicAuth(config))
+
+  app.use(
+    basicAuth({
+      users: config.users,
+      challenge: true,
+    })
+  )
 }
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'static')))
 
-const routes = [
-  { path: '/', file: 'index.html' },
-  { path: '/~', file: 'apps.html' },
-  { path: '/-', file: 'games.html' },
-  { path: '/!', file: 'settings.html' },
-  { path: '/0', file: 'tabs.html' },
-  { path: '/1', file: 'go.html' },
-  { path: '/_', file: 'emulator.html' },
-  { path: '/w', file: 'edu.html' },
-  { path: '/*', file: 'bookmarklets.html' },
-]
+if (config.routes !== false) {
+  const routes = [
+    { path: '/', file: 'index.html' },
+    { path: '/~', file: 'apps.html' },
+    { path: '/-', file: 'games.html' },
+    { path: '/!', file: 'settings.html' },
+    { path: '/0', file: 'tabs.html' },
+    { path: '/1', file: 'go.html' },
+    { path: '/_', file: 'emulator.html' },
+    { path: '/w', file: 'edu.html' },
+    { path: '/*', file: 'bookmarklets.html' },
+  ]
+
+  routes.forEach((route) => {
+    app.get(route.path, (req, res) => {
+      res.sendFile(path.join(__dirname, 'static', route.file))
+    })
+  })
+}
+if (config.local !== false) {
+  app.get('/y/*', (req, res, next) => {
+    const baseUrl = 'https://raw.githubusercontent.com/ypxa/y/main'
+    fetchData(req, res, next, baseUrl)
+  })
+
+  app.get('/f/*', (req, res, next) => {
+    const baseUrl = 'https://raw.githubusercontent.com/4x-a/x/fixy'
+    fetchData(req, res, next, baseUrl)
+  })
+}
 
 const fetchData = async (req, res, next, baseUrl) => {
   try {
@@ -48,23 +73,6 @@ const fetchData = async (req, res, next, baseUrl) => {
     next(error)
   }
 }
-
-app.get('/y/*', cors({ origin: false }), (req, res, next) => {
-  const baseUrl = 'https://raw.githubusercontent.com/ypxa/y/main'
-  fetchData(req, res, next, baseUrl)
-})
-
-app.get('/f/*', cors({ origin: false }), (req, res, next) => {
-  const baseUrl = 'https://raw.githubusercontent.com/4x-a/x/fixy'
-  fetchData(req, res, next, baseUrl)
-})
-
-routes.forEach((route) => {
-  app.get(route.path, (req, res) => {
-    res.sendFile(path.join(__dirname, 'static', route.file))
-  })
-})
-
 server.on('request', (req, res) => {
   if (bareServer.shouldRoute(req)) {
     bareServer.routeRequest(req, res)

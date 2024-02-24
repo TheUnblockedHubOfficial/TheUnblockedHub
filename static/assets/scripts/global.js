@@ -204,10 +204,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var eventKey = localStorage.getItem('eventKey') || '`'
-  var panicLink = localStorage.getItem('panicLink') || 'https://classroom.google.com/'
+  var pLink = localStorage.getItem('pLink') || 'https://classroom.google.com/'
 
   document.getElementById('eventKeyInput').value = eventKey
-  document.getElementById('linkInput').value = panicLink
+  document.getElementById('linkInput').value = pLink
 
   const selectedOption = localStorage.getItem('selectedOption')
   if (selectedOption) {
@@ -217,10 +217,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function saveEventKey() {
   var eventKey = document.getElementById('eventKeyInput').value
-  var panicLink = document.getElementById('linkInput').value
+  var papLinknicLink = document.getElementById('linkInput').value
 
   localStorage.setItem('eventKey', eventKey)
-  localStorage.setItem('panicLink', panicLink)
+  localStorage.setItem('pLink', pLink)
 
   document.getElementById('eventKeyInput').value = ''
   document.getElementById('linkInput').value = ''

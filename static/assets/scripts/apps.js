@@ -132,11 +132,23 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false,
     },
     {
+      name: 'Lostgamer',
+      link: 'https://lostgamer.io',
+      image: '/assets/media/icons/apps/lostgamerio.jpg',
+      categories: ['all', '2P'],
+    },
+    {
       name: 'Geforce NOW',
       link: 'https://play.geforcenow.com',
       image: '/assets/media/icons/apps/geforce-now.png',
       categories: ['all', 'stream', 'cloud'],
       error: false,
+    },
+    {
+      name: 'Google Gemini ',
+      link: 'https://gemini.google.com',
+      image: '/assets/media/icons/apps/gemini.png',
+      categories: ['all', 'ai'],
     },
     {
       name: 'Github',
