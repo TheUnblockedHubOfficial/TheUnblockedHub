@@ -526,7 +526,6 @@ select {
   background-size: cover;
 }
 
-
 #suggestions {
   display: none;
 }
@@ -542,7 +541,6 @@ select {
   margin-top: 1em;
   align-items: center;
   justify-content: center;
-
 }
 
 .sugelement {
@@ -564,6 +562,23 @@ select {
   cursor: pointer;
 }
 
+.support-button {
+  display: inline-block;
+  margin-top: 25vh; /* Adjusted margin-top */
+  margin-bottom: 50px; /* Adjusted margin-bottom */
+  padding: 20px 80px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #363636;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.support-button:hover {
+  background-color: #767676; /* Darker color when hovered */
+}
 .back-to-hub-button {
   display: inline-block;
   margin-top: 5vh; /* Adjusted margin-top */
