@@ -7,7 +7,6 @@
    <meta http-equiv="X-Content-Type-Options" content="nosniff">
    <link rel="shortcut icon" id="tab-favicon" href="favicon.png">
    <title id="tab-title">Home</title>
-   <script src="/assets/scripts/global.js?v=8"></script>
    <link rel="stylesheet" href="/assets/styles/main.css?v=1">
    <link rel="stylesheet" href="/assets/styles/settings.css?v=1">
    <link rel="stylesheet" href="/assets/styles/themes/default.css?v=2" />
@@ -75,7 +74,9 @@
 </select>
     <input class="key-form" type="text" id="icon" placeholder="Change Tab Icon" name="icon">
     <input class="key-form" type="text" id="name" name="name" placeholder="Change Tab Name">
-    <button class="key-button" value="Save" onclick="saveIcon(); saveName(); redirectToMainDomain()">Save</button>
+    <button class="key-button" value="Save" onclick="CustomIcon(); CustomName(); redirectToMainDomain();">
+      Save
+    </button>
       </div>
         <div class="settings-card">
          <h3>Particles</h3>
@@ -121,7 +122,8 @@
       </div>
    </div>
 </div>
-<script src="/assets/scripts/settings.js?v=3"></script>
+<script src="/assets/scripts/main.min.js?v=1"></script>
+<script src="/assets/scripts/settings.min.js?v=1"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
 <script>
    window.dataLayer = window.dataLayer || [];
@@ -129,5 +131,6 @@
    gtag('js', new Date());
    gtag('config', 'G-7T3R5WJJRV');
 </script>
+<div id="adv"></div>
 </body>
 </html>

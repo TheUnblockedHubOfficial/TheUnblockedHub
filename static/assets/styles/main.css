@@ -406,7 +406,7 @@ select {
   text-transform: uppercase;
   border-radius: 0px 0px 5px 5px;
   margin-top: 20vh; /* Adjusted margin-top */
-  margin-bottom: 2vh; /* Adjusted margin-bottom */
+  margin-bottom: 0px; /* Adjusted margin-bottom */
   text-shadow: 2px 4px 6px rgb(0, 0, 0, 0.2);
 }
 
@@ -564,8 +564,8 @@ select {
 
 .support-button {
   display: inline-block;
-  margin-top: 25vh; /* Adjusted margin-top */
-  margin-bottom: 50px; /* Adjusted margin-bottom */
+  margin-top: 5vh; /* Adjusted margin-top */
+  margin-bottom: 25px; /* Adjusted margin-bottom */
   padding: 20px 80px;
   font-size: 30px;
   font-weight: bold;
@@ -581,7 +581,7 @@ select {
 }
 .back-to-hub-button {
   display: inline-block;
-  margin-top: 5vh; /* Adjusted margin-top */
+  margin-top: 0px; /* Adjusted margin-top */
   margin-bottom: 15px; /* Adjusted margin-bottom */
   padding: 20px 80px;
   font-size: 30px;

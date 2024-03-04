@@ -2,12 +2,12 @@
     <img src="https://i.ibb.co/pWz4Yw2/ubhtextimg.png">
     <p>Serving over 7 million users since 2023.<p>
 </div>
-## What is The Unblocked Hub? 🤔
-<p>The Unblocked Hub is a web proxy with a clean and sleek ui and easy to use menus. Our goal is to provide the best user experience to everyone.</p>
+## What is The Unblocked Hub?
+<p>The Unblocked Hub is a web proxy with a Clean and Sleek UI and easy to use menus. Our goal is to provide the best user experience to everyone.</p>
 
-**If you fork this project, consider giving it a star in the original repository!**
+If you fork this project, consider giving it a star in the original repository!
 
-## Features 💻
+## Features 
 <div align="center">
 
 | Wide Collection of Games |  Tab Cloaking   | Wide collection of Apps |
@@ -18,7 +18,7 @@
 
 </div>
 
-## Deployment 🔽
+## Deployment 
 
 ### Easy Deployment
 
@@ -50,9 +50,10 @@ As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/host
 
 ### Solution for if there is no popup.
 
-1. Run `npm i`, and before `npm run start`, prepend `$env:PORT=8080;`, replacing 8080 with another port. For example, `$env:PORT=6969; npm run start`.
-2. Go to the ports tab, Click Forward A Port, And type the port number.
-3. Right-click Visibility and set Port Visibility to Public.
+1. Run `npm i`, and before `npm run start`, prepend `PORT=8080`, replacing 8080 with another port. For example, `PORT=6969 npm run start`.
+2. If this does not work then you can prepend `$env:PORT=8080;`, replacing 8080 with another port. For example, `$env:PORT=6969; npm run start`
+3. Go to the ports tab, Click Forward A Port, And type the port number.
+4. Right-click Visibility and set Port Visibility to Public.
 
 ### Need Help with Deployment?
 

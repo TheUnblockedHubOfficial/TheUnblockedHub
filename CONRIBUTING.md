@@ -1,31 +1,35 @@
-# Contributing
+# Contributing Guidlines
 
-Thank you for considering contributing to this repository! Please take a moment to review the following guidelines to ensure a smooth collaboration.
+Thank you for your interest in contributing to this repository! To ensure a smooth collaboration, please review the following guidelines:
 
 ## Pull Request Process
 
 1. **Compatibility:**
-   - Verify that your changes work seamlessly on both mobile and desktop platforms.
+   - Ensure your changes work seamlessly on both mobile and desktop platforms.
 
-2. **Version Bumping:**
-   - If you modify any files, ensure to update the version accordingly. For example, if you edit `/static/assets/scripts/index.js`, update the version in all relevant files (e.g., `index.js?v=number`) to the next consecutive number.
+2. **Minifying Code:**
+   - Visit the modified file (Ex. `/static/assets/scripts/index.js`), copy the code, and utilize a code minifier. Next, paste the minified code into the corresponding .min. file (Ex. `/static/assets/scripts/index.min.js`).
+   - When minifying, you can choose your preferred minifier or use one of the following:
+     - [FreeFormatter CSS Minifier](https://www.freeformatter.com/css-minifier.html)
+     - [Toptal JavaScript Minifier](https://www.toptal.com/developers/javascript-minifier)
 
-3. **Code Formatting:**
-   - Before finalizing your changes, run the following command in the terminal to format your code consistently:
-     ```bash
-     npm run format
-     ```
+3. **Version Bumping:**
+   - Update the version in relevant files (e.g., `index.js?v=number`) to the next consecutive number when modifying any files.
 
-4. **Test Your Changes:**
-   - Perform thorough testing to ensure that your modifications do not introduce any issues or break existing functionalities.
+4. **Code Formatting:**
 
-5. **Descriptive Pull Requests:**
-   - Provide clear and concise descriptions for your pull requests. Include details about the problem your changes address and how they solve it.
+   - Before finalizing changes, run the following command in the terminal for consistent code formatting:
 
-6. **Responsive Design:**
-   - Confirm that your changes adhere to responsive design principles, ensuring a seamless user experience across various devices.
+5. **Test Your Changes:**
+   - Conduct thorough testing to ensure modifications don't introduce issues or break existing functionalities.
 
-7. **Collaboration:**
-   - Be open to feedback and be responsive to comments during the review process.
+6. **Descriptive Pull Requests:**
+   - Provide clear, concise descriptions for your pull requests. Include details on the problem addressed and how your changes resolve it.
+
+7. **Responsive Design:**
+   - Confirm that changes adhere to responsive design principles, ensuring a seamless user experience across various devices.
+
+8. **Collaboration:**
+   - Be open to feedback and responsive to comments during the review process.
 
 We appreciate your efforts in contributing to this project!

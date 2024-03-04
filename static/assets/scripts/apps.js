@@ -1,468 +1,117 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const appsList = [
-    {
-      name: 'Addicting Games',
-      link: 'https://www.addictinggames.com/',
-      image: '/assets/media/icons/apps/addictinggames.jpg',
-      categories: ['all'],
-    },
-    {
-      name: 'Amazon',
-      link: 'https://amazon.com/',
-      image: '/assets/media/icons/apps/amazon.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Amazon Luna',
-      link: 'https://luna.amazon.com/',
-      image: '/assets/media/icons/amazon-luna.png',
-      categories: ['all', 'game', 'cloud'],
-      blank: 'true',
-      error: false,
-    },
-    {
-      name: 'Android',
-      link: 'https://now.gg/iframe/snippet?app_pkg=com.uncube.launcher3&partner=interstellar',
-      image: '/assets/media/icons/android.jpg',
-      categories: ['all', 'emu', 'android'],
-    },
-    {
-      name: 'Ani Watch',
-      link: 'https://aniwatch.to',
-      image: '/assets/media/icons/apps/aniwatch.webp',
-      categories: ['all', 'media', 'stream'],
-      error: false,
-    },
-    {
-      name: 'BuzzFeed Quizzes',
-      link: 'https://buzzfeed.com/quizzes',
-      image: '/assets/media/icons/apps/buzzfeed.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Movie Web',
-      link: 'https://movie-web.app',
-      image: 'https://movie-web.app/apple-touch-icon.png',
-      categories: ['all', 'media', 'stream'],
-      error: false,
-    },
-    {
-      name: 'Netflix',
-      link: 'https://www.netflix.com/',
-      image: '/assets/media/icons/apps/netflix.jpg',
-      categories: ['all', 'media', 'stream'],
-      error: false,
-    },
-    {
-      name: 'Character AI',
-      link: 'https://now.gg/iframe/snippet?app_pkg=ai.character.app&partner=interstellar',
-      image: '/assets/media/icons/characterai.jpg',
-      categories: ['all', 'emu', 'android'],
-    },
-    {
-      name: 'ChatGPT Clone',
-      link: 'https://chat.shuttleai.app/',
-      image: '/assets/media/icons/chatgpt.png',
-      categories: ['all', 'AI'],
-      error: false,
-    },
-    {
-      name: 'Chess.com',
-      link: 'https://chess.com',
-      image: '/assets/media/icons/chess.png',
-      categories: ['all', 'game'],
-      error: false,
-    },
-    {
-      name: 'Cool Math Games',
-      link: 'https://coolmathgames.com',
-      image: '/assets/media/icons/apps/coolmath.png',
-      categories: ['all', 'game'],
-      error: false,
-    },
-    {
-      name: 'Donitz - itch.io',
-      link: 'https://donitz.itch.io/',
-      image: '/assets/media/icons/itch.png',
-      categories: ['all'],
-      error: false,
-    },
-    {
-      name: 'DuckDuckGo',
-      link: 'https://start.duckduckgo.com/',
-      image: '/assets/media/icons/apps/duckduckgo.png',
-      categories: ['all'],
-      error: false,
-    },
-    {
-      name: 'ESPN',
-      link: 'https://www.espn.com/watch/',
-      image: '/assets/media/icons/apps/espn.webp',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Fifa Rosters',
-      link: 'https://fifarosters.com/',
-      image: '/assets/media/icons/fifa.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Firefox Web Browser',
-      link: 'https://replit.com/@cooleddie001/Firefox-Legacy?v=1',
-      image: '/assets/media/icons/apps/firefox.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Flix HQ',
-      link: 'https://flixhq.to',
-      image: '/assets/media/icons/apps/flixhq.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'GBA',
-      link: 'https://math-study.github.io/gba/',
-      image: '/assets/media/icons/classic-nintendo.png',
-      categories: ['all'],
-      error: false,
-    },
-    {
-      name: 'Lostgamer',
-      link: 'https://lostgamer.io',
-      image: '/assets/media/icons/apps/lostgamerio.jpg',
-      categories: ['all', '2P'],
-    },
-    {
-      name: 'Geforce NOW',
-      link: 'https://play.geforcenow.com',
-      image: '/assets/media/icons/apps/geforce-now.png',
-      categories: ['all', 'stream', 'cloud'],
-      error: false,
-    },
-    {
-      name: 'Google Gemini ',
-      link: 'https://gemini.google.com',
-      image: '/assets/media/icons/apps/gemini.png',
-      categories: ['all', 'ai'],
-    },
-    {
-      name: 'Github',
-      link: 'https://github.com',
-      image: '/assets/media/icons/apps/github.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Google',
-      link: 'https://google.com',
-      image: '/assets/media/icons/apps/google.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'HBO MAX',
-      link: 'https://www.hbomax.com/',
-      image: '/assets/media/icons/apps/hbo.webp',
-      categories: ['all', 'stream'],
-      error: false,
-    },
-    {
-      name: 'HD Today',
-      link: 'https://hdtoday.tv',
-      image: '/assets/media/icons/hd.png',
-      categories: ['all', 'media', 'stream'],
-    },
-    {
-      name: 'Hulu',
-      link: 'https://www.hulu.com/',
-      image: '/assets/media/icons/apps/hulu.jpg',
-      categories: ['all', 'media', 'stream'],
-      error: false,
-    },
-    {
-      name: 'Messenger',
-      link: 'https://messenger.com/',
-      image: '/assets/media/icons/apps/messenger.png',
-      categories: ['all', 'social', 'message'],
-      error: false,
-    },
-    {
-      name: 'Now.GG',
-      link: 'https://now.gg',
-      image: '/assets/media/icons/now-gg.png',
-      categories: ['all', 'game'],
-    },
-    {
-      name: 'Now.GG (NowGG.nl)',
-      link: 'https://nowgg.nl',
-      image: '/assets/media/icons/astroid.png',
-      categories: ['all', 'game'],
-    },
-    {
-      name: 'Paramount Plus',
-      link: 'https://paramountplus.com',
-      image: '/assets/media/icons/apps/paramount.png',
-      categories: ['all', 'stream'],
-      error: false,
-    },
-    {
-      name: 'Pinterest',
-      link: 'https://pinterest.com',
-      image: '/assets/media/icons/apps/pinterest.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Pixlr',
-      link: 'https://pixlr.com/',
-      image: '/assets/media/icons/pix.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Poki',
-      link: 'https://poki.com',
-      image: '/assets/media/icons/apps/poki.png',
-      categories: ['all', 'game'],
-      error: false,
-    },
-    {
-      name: 'Retro Arch',
-      link: 'https://binbashbanana.github.io/webretro/',
-      image: '/assets/media/icons/retroarch.webp',
-      categories: ['all'],
-      error: false,
-    },
-    {
-      name: 'Scratch',
-      link: 'https://scratch.mit.edu',
-      image: '/assets/media/icons/scratch.jpg',
-      categories: ['all', 'social', 'game', 'media'],
-      error: false,
-    },
-    {
-      name: 'Soundboard',
-      link: 'https://www.myinstants.com/en/categories/sound%20effects/',
-      image: '/assets/media/icons/IMG_3898.png',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Soundcloud',
-      link: 'https://soundcloud.com',
-      image: '/assets/media/icons/apps/soundcloud.jpg',
-      categories: ['all', 'media'],
-      error: false,
-    },
-    {
-      name: 'Spotify',
-      link: 'https://open.spotify.com',
-      image: '/assets/media/icons/apps/spotify.png',
-      categories: ['all', 'media'],
-      say: 'Spotify is currently not working on the proxy.',
-      error: true,
-    },
-    {
-      name: 'Telegram',
-      link: 'https://web.telegram.org/',
-      image: '/assets/media/icons/apps/telegram.png',
-      categories: ['all', 'social'],
-      error: false,
-    },
-    {
-      name: 'Temu',
-      link: 'https://temu.com',
-      image: '/assets/media/icons/temu.webp',
-      categories: ['all'],
-    },
-    {
-      name: 'Tiktok',
-      link: 'https://tiktok.com',
-      image: '/assets/media/icons/apps/tiktok.png',
-      categories: ['all', 'social', 'media'],
-      error: false,
-    },
-    {
-      name: 'Tumblr',
-      link: 'https://tumblr.com/',
-      image: '/assets/media/icons/apps/tumblr.png',
-      categories: ['all', 'social'],
-      error: false,
-    },
-    {
-      name: 'Twitch',
-      link: 'https://twitch.tv',
-      image: '/assets/media/icons/apps/twitch-tv.png',
-      categories: ['all', 'stream', 'media'],
-      error: false,
-    },
-    {
-      name: 'X',
-      link: 'https://twitter.com',
-      image: '/assets/media/icons/apps/xlogo.webp',
-      categories: ['all', 'social', 'media'],
-      error: false,
-    },
-    {
-      name: 'VS Code',
-      link: 'https://vscode.dev',
-      image: '/assets/media/icons/apps/vscode.png',
-      categories: ['all', 'tool'],
-      error: false,
-    },
-    {
-      name: 'Y8 Games',
-      link: 'https://y8.com/',
-      image: '/assets/media/icons/apps/y8.png',
-      categories: ['all', 'game'],
-      error: false,
-    },
-    {
-      name: 'YouTube',
-      link: 'https://youtube.com',
-      image: '/assets/media/icons/apps/yt.png',
-      categories: ['all', 'social', 'stream', 'media'],
-      error: false,
-    },
-    {
-      name: 'YouTube Music',
-      link: 'https://music.youtube.com',
-      image: '/assets/media/icons/apps/ytmusic.png',
-      categories: ['all', 'social', 'stream', 'media'],
-      error: false,
-    },
-    {
-      name: 'Whatsapp',
-      link: 'https://web.whatsapp.com/',
-      image: '/assets/media/icons/apps/whatsapp.png',
-      categories: ['all', 'message', 'social'],
-      error: false,
-    },
-    {
-      name: 'Wattpad',
-      link: 'https://wattpad.com/',
-      image: '/assets/media/icons/apps/wattpad.webp',
-      categories: ['all', 'social'],
-      error: false,
-    },
-    {
-      name: 'Web Retro',
-      link: 'https://binbashbanana.github.io/webretro/',
-      image: '/assets/media/icons/webretro.png',
-      categories: ['all,', 'emu'],
-      error: false,
-    },
-  ]
+  fetch('/assets/json/apps.min.json')
+    .then((response) => response.json())
+    .then((appsList) => {
+      appsList.sort((a, b) => a.name.localeCompare(b.name))
 
-  appsList.sort((a, b) => a.name.localeCompare(b.name))
+      const nonPinnedApps = document.querySelector('.container-apps')
+      const pinnedApps = document.querySelector('.pinned-apps')
 
-  const nonPinnedApps = document.querySelector('.container-apps')
-  const pinnedApps = document.querySelector('.pinned-apps')
+      var pinList = localStorage.getItem('pinnedGames')
+      try {
+        pinList = pinList.split(',').map(Number)
+      } catch {}
 
-  var pinList = localStorage.getItem('pinnedGames')
-  try {
-    pinList = pinList.split(',').map(Number)
-  } catch {}
-  var appInd = 0
-  appsList.forEach((app) => {
-    let pinNum = appInd
-    const columnDiv = document.createElement('div')
-    columnDiv.classList.add('column')
-    columnDiv.setAttribute('data-category', app.categories.join(' '))
+      var appInd = 0
+      appsList.forEach((app) => {
+        let pinNum = appInd
 
-    const pinIcon = document.createElement('i')
-    pinIcon.classList.add('fa')
-    pinIcon.classList.add('fa-map-pin')
-    pinIcon.ariaHidden = true
+        const columnDiv = document.createElement('div')
+        columnDiv.classList.add('column')
+        columnDiv.setAttribute('data-category', app.categories.join(' '))
 
-    const btn = document.createElement('button')
-    btn.appendChild(pinIcon)
-    btn.style.float = 'right'
-    btn.style.backgroundColor = 'rgb(45,45,45)'
-    btn.style.borderRadius = '50%'
-    btn.style.borderColor = 'transparent'
-    btn.style.color = 'white'
-    btn.style.top = '-200px'
-    btn.style.position = 'relative'
-    btn.onclick = function () {
-      setPin(pinNum)
-    }
-    btn.title = 'Pin'
+        const pinIcon = document.createElement('i')
+        pinIcon.classList.add('fa', 'fa-map-pin')
+        pinIcon.ariaHidden = true
 
-    const link = document.createElement('a')
+        const btn = document.createElement('button')
+        btn.appendChild(pinIcon)
+        btn.style.float = 'right'
+        btn.style.backgroundColor = 'rgb(45,45,45)'
+        btn.style.borderRadius = '50%'
+        btn.style.borderColor = 'transparent'
+        btn.style.color = 'white'
+        btn.style.top = '-200px'
+        btn.style.position = 'relative'
+        btn.onclick = function () {
+          setPin(pinNum)
+        }
+        btn.title = 'Pin'
 
-    function saveToLocal(path) {
-      sessionStorage.setItem('GoUrl', path)
-    }
+        const link = document.createElement('a')
 
-    function handleClick(app) {
-      if (typeof app.say !== 'undefined') {
-        alert(app.say)
-      }
+        function saveToLocal(path) {
+          sessionStorage.setItem('GoUrl', path)
+        }
 
-      if (app.local) {
-        saveToLocal(app.link)
-        window.location.href = '&'
-      } else if (app.local2) {
-        saveToLocal(app.link)
-        window.location.href = app.link
-      } else if (app.blank) {
-        blank(app.link)
-      } else {
-        go(app.link)
-      }
+        function handleClick(app) {
+          if (typeof app.say !== 'undefined') {
+            alert(app.say)
+          }
 
-      return false
-    }
+          if (app.local) {
+            saveToLocal(app.link)
+            window.location.href = '&'
+          } else if (app.local2) {
+            saveToLocal(app.link)
+            window.location.href = app.link
+          } else if (app.blank) {
+            blank(app.link)
+          } else if (app.now) {
+            now(app.link)
+          } else {
+            go(app.link)
+          }
 
-    link.onclick = function () {
-      handleClick(app)
-    }
+          return false
+        }
 
-    const image = document.createElement('img')
-    image.width = 145
-    image.height = 145
-    image.src = app.image
-    image.loading = 'lazy'
+        link.onclick = function () {
+          handleClick(app)
+        }
 
-    const paragraph = document.createElement('p')
-    paragraph.textContent = app.name
-    if (app.error) {
-      paragraph.style.color = 'red'
-    }
+        const image = document.createElement('img')
+        image.width = 145
+        image.height = 145
+        image.src = app.image
+        image.loading = 'lazy'
 
-    link.appendChild(image)
-    link.appendChild(paragraph)
-    columnDiv.appendChild(link)
-    if (appInd != 0) {
-      columnDiv.appendChild(btn)
-    }
+        const paragraph = document.createElement('p')
+        paragraph.textContent = app.name
+        if (app.error) {
+          paragraph.style.color = 'red'
+        }
 
-    if (pinList != null && appInd != 0) {
-      if (pinContains(appInd, pinList)) {
-        pinnedApps.appendChild(columnDiv)
-      } else {
-        nonPinnedApps.appendChild(columnDiv)
-      }
-    } else {
-      nonPinnedApps.appendChild(columnDiv)
-    }
-    appInd++
-  })
-  console.log('appsContainer:', appsContainer)
-  console.log('pinnedApps:', pinnedApps)
-  console.log('nonPinnedApps:', nonPinnedApps)
+        link.appendChild(image)
+        link.appendChild(paragraph)
+        columnDiv.appendChild(link)
 
-  appsContainer.appendChild(pinnedApps)
-  appsContainer.appendChild(nonPinnedApps)
+        if (appInd != 0) {
+          columnDiv.appendChild(btn)
+        }
+
+        if (pinList != null && appInd != 0) {
+          if (pinContains(appInd, pinList)) {
+            pinnedApps.appendChild(columnDiv)
+          } else {
+            nonPinnedApps.appendChild(columnDiv)
+          }
+        } else {
+          nonPinnedApps.appendChild(columnDiv)
+        }
+        appInd++
+      })
+
+      const appsContainer = document.getElementById('apps-container')
+      appsContainer.appendChild(pinnedApps)
+      appsContainer.appendChild(nonPinnedApps)
+    })
+    .catch((error) => {
+      console.error('Error fetching JSON data:', error)
+    })
 })
 function setPin(index) {
-  pins = localStorage.getItem('pinnedGames')
+  let pins = localStorage.getItem('pinnedGames')
   if (pins == null) {
     pins = []
   }

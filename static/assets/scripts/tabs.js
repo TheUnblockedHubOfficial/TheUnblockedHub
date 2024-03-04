@@ -77,17 +77,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
 
   window.addEventListener('message', function (event) {
+    if (event.origin !== window.location.origin) {
+      console.warn('Received message from unexpected origin:', event.origin)
+      return;
+    }
     console.log('Received message:', event.data)
     if (event.data && event.data.url) {
       const iframes = Array.from(iframeContainer.querySelectorAll('iframe'))
+      } else {
+        console.log('No URL data in the message.')
+      }
+
       const activeIframe = iframes.find((iframe) => iframe.classList.contains('active'))
 
       if (activeIframe) {
         console.log('Visible iframe:', activeIframe)
+  
         const tabToUpdate = tabList.querySelector(`[data-tab-id='${activeIframe.dataset.tabId}']`)
+  
         if (tabToUpdate) {
           console.log('Tab to update:', tabToUpdate)
+  
           const tabTitle = tabToUpdate.querySelector('.tab-title')
+  
           if (tabTitle) {
             console.log('Tab title:', tabTitle)
             tabTitle.textContent = event.data.url
@@ -97,14 +109,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
           }
         } else {
           console.log('No tab to update found.')
-        }
-      } else {
-        console.log('No visible iframe found.')
       }
     } else {
-      console.log('No URL data in the message.')
+      console.log('No tab visible iframe found.')
     }
   })
+
 
   function switchTab(event) {
     const tabId = event.target.closest('li').dataset.tabId
@@ -153,13 +163,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     dragTab = null
   })
 
-  const container = document.querySelector('.container')
-
-  toggleNavButton.addEventListener('click', () => {
-    navOpen = !navOpen
-    toggleNavButton.classList.toggle('open')
-    container.classList.toggle('nav-closed')
-  })
 })
 
 function reload() {

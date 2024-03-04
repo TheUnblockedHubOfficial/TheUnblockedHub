@@ -2,13 +2,13 @@
 var eventKey = localStorage.getItem('eventKey') || '`'
 var pLink = localStorage.getItem('pLink') || 'https://classroom.google.com/'
 
-document.addEventListener('keydown', function (event) {
-  if (event.key === eventKey) {
-    if (window.self !== window.top) {
-      window.parent.location.href = encodeURIComponent(pLink)
-    } else {
-      window.location.href = encodeURIComponent(pLink)
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('eventKeyInput').value = eventKey
+  document.getElementById('linkInput').value = pLink
+
+  const selectedOption = localStorage.getItem('selectedOption')
+  if (selectedOption) {
+    updateHeadSection(selectedOption)
   }
 })
 
@@ -29,65 +29,120 @@ function saveEventKey() {
 }
 
 // Tab Cloaker
-function saveName() {
-  const name = document.getElementById('name').value
-  localStorage.setItem('name', name)
-}
-
 function saveIcon() {
-  const icon = document.getElementById('icon').value
-  localStorage.setItem('icon', icon)
+  const iconElement = document.getElementById('icon')
+  const iconValue = iconElement.value
+  console.log('saveIcon function called with icon value:', iconValue)
+  localStorage.setItem('icon', iconValue)
 }
 
-// Function to update favicon and title based on selected option
-function updateHeadSection(selectedValue) {
-  const icon = document.getElementById('tab-favicon')
-  const name = document.getElementById('tab-title')
+function saveName() {
+  const nameElement = document.getElementById('name')
+  const nameValue = nameElement.value
+  console.log('saveName function called with name value:', nameValue)
+  localStorage.setItem('name', nameValue)
+}
+
+function CustomIcon() {
+  const iconElement = document.getElementById('icon')
+  const iconValue = iconElement.value
+  console.log('saveIcon function called with icon value:', iconValue)
+  localStorage.setItem('CustomIcon', iconValue)
+}
+
+function CustomName() {
+  const nameElement = document.getElementById('name')
+  const nameValue = nameElement.value
+  console.log('saveName function called with name value:', nameValue)
+  localStorage.setItem('CustomName', nameValue)
+}
 
   if (selectedValue === 'Google') {
-    icon.setAttribute('href', '/assets/media/favicon/google.png')
-    name.textContent = 'Google'
-    localStorage.setItem('name', 'Google')
-    localStorage.setItem('icon', '/assets/media/favicon/google.png')
-  } else if (selectedValue === 'Drive') {
-    icon.setAttribute('href', '/assets/media/favicon/drive.png')
-    name.textContent = 'My Drive - Google Drive'
-    localStorage.setItem('name', 'My Drive - Google Drive')
-    localStorage.setItem('icon', '/assets/media/favicon/drive.png')
-  } else if (selectedValue === 'Classroom') {
-    icon.setAttribute('href', '/assets/media/favicon/classroom.png')
-    name.textContent = 'Home'
-    localStorage.setItem('name', 'Home')
-    localStorage.setItem('icon', '/assets/media/favicon/classroom.png')
+    function redirectToMainDomain() {
+      var currentUrl = window.location.href
+      var mainDomainUrl = currentUrl.replace(/\/[^\/]*$/, '')
+      if (window != top) {
+        top.location.href = mainDomainUrl + window.location.pathname
+      } else {
+        window.location.href = mainDomainUrl + window.location.pathname
+      }
+    }
   }
-}
+    // Redirect
+    document.addEventListener('DOMContentLoaded', function (event) {
+      const icon = document.getElementById('tab-favicon')
+      const name = document.getElementById('tab-title')
+      var selectedValue = localStorage.getItem('selectedOption') || 'Default'
+      document.getElementById('dropdown').value = selectedValue
+      updateHeadSection(selectedValue)
+    })
 
-// Redirect
 function handleDropdownChange(selectElement) {
   var selectedValue = selectElement.value
+  localStorage.removeItem('CustomName')
+  localStorage.removeItem('CustomIcon')
+  localStorage.setItem('selectedOption', selectedValue)
+  updateHeadSection(selectedValue)
   redirectToMainDomain(selectedValue)
 }
 
-function redirectToMainDomain(selectedValue) {
-  var currentUrl = window.location.href
-  var mainDomainUrl = currentUrl.replace(/\/[^\/]*$/, '')
+function updateHeadSection(selectedValue) {
+  const icon = document.getElementById('tab-favicon')
+  const name = document.getElementById('tab-title')
+  const customName = localStorage.getItem('CustomName')
+  const customIcon = localStorage.getItem('CustomIcon')
 
-  if (window != top) {
-    top.location.href = mainDomainUrl
+  if (customName && customIcon) {
+    name.textContent = customName
+    icon.setAttribute('href', customIcon)
+    localStorage.setItem('name', customName)
+    localStorage.setItem('icon', customIcon)
   } else {
-    window.location.href = mainDomainUrl
+    if (selectedValue === 'Google') {
+      icon.setAttribute('href', '/assets/media/favicon/google.png')
+      name.textContent = 'Google'
+      localStorage.setItem('name', 'Google')
+      localStorage.setItem('icon', '/assets/media/favicon/google.png')
+    } else if (selectedValue === 'Drive') {
+      icon.setAttribute('href', '/assets/media/favicon/drive.png')
+      name.textContent = 'My Drive - Google Drive'
+      localStorage.setItem('name', 'My Drive - Google Drive')
+      localStorage.setItem('icon', '/assets/media/favicon/drive.png')
+    } else if (selectedValue === 'Classroom') {
+      icon.setAttribute('href', '/assets/media/favicon/classroom.png')
+      name.textContent = 'Home'
+      localStorage.setItem('name', 'Home')
+      localStorage.setItem('icon', '/assets/media/favicon/classroom.png')
+    }
   }
 }
+// Background Image
+document.addEventListener('DOMContentLoaded', function () {
+  var saveButton = document.getElementById('save-button')
+  saveButton.addEventListener('click', function () {
+    var backgroundInput = document.getElementById('background-input')
+    var imageURL = backgroundInput.value
 
-// Dropdown event listener
-const dropdown = document.getElementById('dropdown')
-dropdown.addEventListener('change', function () {
-  const selectedValue = dropdown.value
-  updateHeadSection(selectedValue)
+    if (imageURL !== '') {
+      localStorage.setItem('backgroundImage', imageURL)
+      document.body.style.backgroundImage = "url('" + imageURL + "')"
+      backgroundInput.value = ''
+    } else {
+    }
+  })
 
-  // Save selected option to localStorage
-  localStorage.setItem('selectedOption', selectedValue)
+  var resetButton = document.getElementById('reset-button')
+  resetButton.addEventListener('click', function () {
+    localStorage.removeItem('backgroundImage')
+    document.body.style.backgroundImage = "url('default-background.jpg')"
+  })
+
+  var savedBackgroundImage = localStorage.getItem('backgroundImage')
+  if (savedBackgroundImage) {
+    document.body.style.backgroundImage = "url('" + savedBackgroundImage + "')"
+  }
 })
+// Particles
 
 const switches = document.getElementById('2')
 
@@ -131,6 +186,8 @@ function themeChange(ele) {
   window.location = window.location
 }
 
+
+// AB Cloak
 function AB() {
   let inFrame
 

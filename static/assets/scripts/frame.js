@@ -18,7 +18,7 @@ function iframeLoad() {
   if (document.readyState === 'complete') {
     const website = iframe.contentWindow?.location.href.replace(window.location.origin, '')
     if (website.includes('/y/') || website.includes('/f/')) {
-      document.getElementById('is').value = window.location.origin + website
+      document.getElementById('is').value = ''
     } else {
       const website = iframe.contentWindow?.location.href.replace(window.location.origin, '').replace('/a/', '')
       document.getElementById('is').value = decodeXor(website)
@@ -125,3 +125,79 @@ document.addEventListener('fullscreenchange', function () {
   const isFullscreen = Boolean(document.fullscreenElement)
   document.body.classList.toggle('fullscreen', isFullscreen)
 })
+// Now
+var adjustmentCompleted = false
+var attempts = 0
+
+function adjustElements() {
+  if (adjustmentCompleted) {
+    return true
+  }
+
+  var iframe = top.document.getElementById('ifra')
+
+  if (iframe) {
+    var innerDoc = iframe.contentWindow.document
+
+    var roblox = innerDoc.getElementById('js-game-video')
+    var controlBar = innerDoc.getElementById('ng-control-bar')
+
+    if (roblox && controlBar) {
+      roblox.style.top = '415px'
+      controlBar.style.top = '91%'
+
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+}
+
+function CheckAndAdjust() {
+  var intervalId = setInterval(function () {
+    attempts++
+    if (adjustElements()) {
+      clearInterval(intervalId)
+    } else if (attempts >= 30) {
+      clearInterval(intervalId)
+    }
+  }, 5000)
+}
+
+function adjust() {
+  setInterval(function () {
+    var iframe = top.document.getElementById('ifra')
+
+    if (iframe) {
+      var innerDoc = iframe.contentWindow.document
+
+      var roblox = innerDoc.getElementById('js-game-video')
+      var controlBar = innerDoc.getElementById('ng-control-bar')
+      var customClassElement = innerDoc.querySelector('.sc-rUGft.hLgqJJ')
+
+      if (roblox) {
+        checkAndAdjustStyles(roblox, 'top', ['415px'])
+      }
+
+      if (controlBar) {
+        checkAndAdjustStyles(controlBar, 'top', ['91%'])
+      }
+
+      if (customClassElement) {
+        customClassElement.remove()
+      }
+    }
+  }, 3000)
+}
+
+function checkAndAdjustStyles(element, property, targetValues) {
+  if (element) {
+    var currentStyle = window.getComputedStyle(element)[property]
+
+    if (!targetValues.includes(currentStyle)) {
+      element.style[property] = targetValues[0]
+    }
+  }
+}
