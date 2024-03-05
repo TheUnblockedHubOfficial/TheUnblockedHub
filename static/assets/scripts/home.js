@@ -1,21 +1,16 @@
+let inFrame
+
 try {
   inFrame = window !== top
 } catch (e) {
   inFrame = true
 }
 
-// Check if the pop-up has already been shown
-const popUpShown = localStorage.getItem('popUpShown')
-if (popUpShown || inFrame || navigator.userAgent.includes('Firefox')) {
-  // If pop-up has already been shown or in iframe/Firefox, do nothing
-} else {
+if (!inFrame && !navigator.userAgent.includes('Firefox')) {
   const popup = open('about:blank', '_blank')
   if (!popup || popup.closed) {
     alert('Please allow popups and redirects.')
   } else {
-    // Set flag indicating that the pop-up has been shown
-    localStorage.setItem('popUpShown', 'true')
-
     const doc = popup.document
     const iframe = doc.createElement('iframe')
     const style = iframe.style
@@ -39,11 +34,21 @@ if (popUpShown || inFrame || navigator.userAgent.includes('Firefox')) {
 
     const pLink = localStorage.getItem(encodeURI('pLink')) || 'https://www.nasa.gov/'
     location.replace(pLink)
+
+    const script = doc.createElement('script')
+    script.textContent = `
+      window.onbeforeunload = function (event) {
+        const confirmationMessage = 'Leave Site?';
+        (event || window.event).returnValue = confirmationMessage;
+        return confirmationMessage;
+      };
+    `
+    doc.head.appendChild(script)
   }
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  if (window.localStorage.getItem('v4Particles') == 'true') {
+  if (window.localStorage.getItem('v4Particles') === 'true') {
     const scr = document.createElement('script')
     scr.src = '/assets/scripts/particles.js'
     document.body.appendChild(scr)
@@ -60,3 +65,10 @@ window.addEventListener('visibilitychange', () => {
     document.querySelector('#hider')?.remove()
   }
 })
+
+document.onkeydown = function (evt) {
+  evt = evt || window.event
+  if (evt.keyCode == 27) {
+    document.getElementById('is').blur()
+  }
+}
